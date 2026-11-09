@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "auditable-ai-trends"
+version = "1.0.0"
+description = "Auditable shared-space topic analysis of ICLR, ICML and NeurIPS"
+requires-python = ">=3.12"
+dependencies = ["numpy", "scipy", "scikit-learn", "lxml", "matplotlib"]
+
+[project.optional-dependencies]
+semantic = ["onnxruntime", "tokenizers"]
+fast-http = ["requests>=2.32"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

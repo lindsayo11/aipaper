@@ -1,0 +1,149 @@
+{
+ "generated_at": "2026-10-28T09:00:42.221441+00:00",
+ "backend": "onnx",
+ "status": "completed_with_public_review_limitations",
+ "counts": {
+  "papers": 43702,
+  "main_accepted": 37662,
+  "modeled": 37662,
+  "formal_reviews_observed": 0,
+  "valid_score_strata": 350,
+  "topics": 50,
+  "statistics_sources": 14,
+  "supplemental_review_observations": 227128
+ },
+ "heatmap_years": [
+  2024,
+  2025
+ ],
+ "heatmap_exclusions": [
+  {
+   "year": 2026,
+   "reason": "NeurIPS: observed/registered < 0.90",
+   "venue_details": [
+    {
+     "venue": "ICLR",
+     "observed_main_accepted": 5353,
+     "registered_accepted": 5357,
+     "coverage_ratio": 0.9992533134216912,
+     "source_level": "conference_fact_sheet",
+     "source_url": "https://media.iclr.cc/Conferences/ICLR2026/ICLR2026_Fact_Sheet.pdf"
+    },
+    {
+     "venue": "ICML",
+     "observed_main_accepted": 6341,
+     "registered_accepted": 6552,
+     "coverage_ratio": 0.9677960927960928,
+     "source_level": "conference_fact_sheet",
+     "source_url": "https://media.icml.cc/Conferences/ICML2026/ICML2026_Fact_Sheet.pdf"
+    },
+    {
+     "venue": "NeurIPS",
+     "observed_main_accepted": 4885,
+     "registered_accepted": 7900,
+     "coverage_ratio": 0.6183544303797468,
+     "source_level": "institutional_restatement",
+     "source_url": "https://aip.riken.jp/news/neurips2026/?lang=en"
+    }
+   ]
+  }
+ ],
+ "coverage_gate": 0.9,
+ "coverage_gate_note": "明显缺口筛选，不是网络完整性或完整提交队列认证。冲突同口径来源取最大录用数作排除检验。",
+ "share_denominator": "all_observed_main_accepted_in_venue_year_including_missing_abstracts",
+ "change_unit": "percentage_points",
+ "scores_status": "available_from_supplementary_public_archive",
+ "score_unavailable_reason": "评分来自后续补充采集的公开存档（OpenReview 历史快照，非主线实时接口）；已在论文内求均值，再在同届同主题按论文等权汇总。各届量表不同（见“量表”列），不跨年份合并，也不与官方接收率混用。ICML 2024 与 NeurIPS 2026 无可用评分，保持缺失。主题编号只在本后端（onnx）内有意义。",
+ "conditional_acceptance_status": "not_estimable",
+ "conditional_acceptance_reason": "缺少事先独立完整决定队列证明；节目册录用名单与自愿公开样本不能作为全部投稿分母。",
+ "bias_notes": [
+  "仅录用成果，存在选择偏差与时滞，不能推断投稿分布或选题录用优势。",
+  "自动主题词与编号需人工复核，跨模型编号不可直接对齐。",
+  "官方总录用率保留来源原分母；未由实采录用论文数反推。"
+ ],
+ "inputs": {
+  "papers_sha256": "6158c9ec943dc00049f101212fd12c58ced2f6681a539352fa25b5def905c232",
+  "reviews_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "assignments_sha256": "8ccc7624734f0083f69d2ee41d3e8c9b68c332b018af7ea577db119bedce194d",
+  "model_manifest_sha256": "b6d6291b97d404923132d1358ba4602ad5f58f5402b0e52e5d5c9782a82b1f44",
+  "statistics_config_sha256": "43d49b081cdd292326a0414439b60d03b4e9c85f17001d1e550f2196b7304349"
+ },
+ "files": {
+  "official_statistics": {
+   "rows": 14,
+   "csv_sha256": "ca20a027df5b9738adbfc1148962806fef14cff9bf0cb26d66c2f09c8151936c",
+   "json_sha256": "87452fa099a5136844e93beee2d7739c968cca5ac8de69ba751e87e0ea94c1b0"
+  },
+  "reconciliation": {
+   "rows": 14,
+   "csv_sha256": "5dd0bcb5452ac4f3e76cbc724eac8e28ef67700001e10fae650ea3901f73cf9d",
+   "json_sha256": "16695469fa364373a76c2ca3be643ba42ef123f93211669be70e74bf64232bb8"
+  },
+  "topic_trends": {
+   "rows": 450,
+   "csv_sha256": "b1310d9d4f10af3df2f65919f387236543cabb4a34d1f589ad819a407a06e4bc",
+   "json_sha256": "435f8494f121e12eb96a52a04ebfdaaa3aa09003f1b58f82d57a018438ac0339"
+  },
+  "topic_changes": {
+   "rows": 300,
+   "csv_sha256": "efbc80827f3528d4d65b967419ab52b03d1b3d2c18dcb6e03f0fef97e8fc209d",
+   "json_sha256": "dc788816357f72f077571fa0442bbb1063eff3dbdbb305ca200ae5a1f675daa2"
+  },
+  "heatmap": {
+   "rows": 300,
+   "csv_sha256": "cf8593f0f6b162113a78ee36e2c353e8146c4601a1957f154d88e3cfb556573b",
+   "json_sha256": "0c2d10e0c9d4600debc6283e7a74f12ae37c10359273e936d6cdba2253b9e79f"
+  },
+  "scores": {
+   "rows": 350,
+   "csv_sha256": "d57ebe155a9005908b659812130346cea533a196b431d9bae0b68c42b7dbf9a0",
+   "json_sha256": "e7fe2f7c3c2c790f1c2a348374561eb059599c140cfcc039512a2fdfc2cf8b7d"
+  },
+  "decision_samples": {
+   "rows": 9,
+   "csv_sha256": "64b1ba68d1a1b4a2daed971fc668a9a225ef1591e58334d03b36a339120e3f38",
+   "json_sha256": "9ea9362ea31dfb69f859575abea5e920111047ccd2f5f63e478312a8b6a3b429"
+  }
+ },
+ "statistics_source_level_counts": {
+  "conference_fact_sheet": 8,
+  "conference_blog": 2,
+  "institutional_restatement": 4
+ },
+ "statistics_missing_cohorts": [],
+ "preferred_statistics_sources": [
+  "ICLR2024-factsheet",
+  "ICLR2025-factsheet",
+  "ICLR2026-factsheet",
+  "ICML2024-institution",
+  "ICML2025-factsheet",
+  "ICML2026-factsheet",
+  "NeurIPS2024-factsheet",
+  "NeurIPS2025-retrospective",
+  "NeurIPS2026-institution"
+ ],
+ "supplemental_inputs": {
+  "source_package": "public_review_scores_and_evidence.zip",
+  "stage": "latest_public_archive_snapshot_not_initial",
+  "review_observations": 227128,
+  "scored_model_papers": 30075,
+  "reviews_csv_sha256": "db1e8c2554c4a6fb719b398e7818bd8e1005b0cac9fabf5dc80c182d3e1de69d",
+  "topic_scores_50_sha256": "aa97d4c387471f1fc62a359f6cc3f679dcd94079691d1ade5364bcd82d59e97d",
+  "covered_venue_years": [
+   "ICLR-2024",
+   "ICLR-2025",
+   "ICLR-2026",
+   "ICML-2025",
+   "ICML-2026",
+   "NeurIPS-2024",
+   "NeurIPS-2025"
+  ],
+  "missing_venue_years": [
+   "ICML-2024",
+   "NeurIPS-2026"
+  ],
+  "missing_reason": "两届未取得可核验的公开评分观测，保持缺失，不按 0 分处理"
+ },
+ "generated_at_original": "2026-10-28T09:00:42.221441+00:00",
+ "patched_at_note": "scores 由补充轮公开存档回填；processed/reviews.jsonl 仍为 0 条，主线实时评审通道的受阻状态未被改写。"
+}

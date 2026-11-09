@@ -1,0 +1,97 @@
+{
+  "status": "completed",
+  "started_at": "2026-10-28T08:59:23.268873+00:00",
+  "backend": "onnx",
+  "actual_backend": "MiniLM-quantized-ONNX-mask-pooling-chunked-L2-KMeans",
+  "optional_backends": {
+    "BERTopic": "not_executed",
+    "HDBSCAN": "not_executed"
+  },
+  "shared_space": true,
+  "text_fields": [
+    "title",
+    "abstract"
+  ],
+  "corpus_filter": {
+    "track": "main",
+    "decision": "accepted",
+    "title": "nonempty",
+    "abstract": "nonempty"
+  },
+  "input_papers": 37662,
+  "processed_input_sha256": "6158c9ec943dc00049f101212fd12c58ced2f6681a539352fa25b5def905c232",
+  "corpus_fingerprint": "8d75b7daecff283f32038a43394c638daf102dd44f455d4727e9dc0a62371a5a",
+  "paper_id_fingerprint": "4f76bd79e1c2cc482df63cc01e5bfabccbfd8a95b10b86589e11e88e7506fb16",
+  "configuration_fingerprint": "99c4313319c95d45019c3d3f3dea344ad162607f595d43afcccf98b23eba2adf",
+  "model_parameters": {
+    "topics": 50,
+    "seed": 42,
+    "max_features": 60000,
+    "svd_components": 128,
+    "min_df": 4,
+    "outlier_quantile": 0.05
+  },
+  "seed": 42,
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "onnxruntime": "1.31.1",
+    "tokenizers": "0.23.3"
+  },
+  "automatic_labels_need_human_review": true,
+  "encoder": {
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "weight_sha256": "b941bf19f1f1283680f449fa6a7336bb5600bdcd5f84d10ddc5cd72218a0fd21",
+    "tokenizer_sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+    "max_tokens": 256,
+    "pooling": "attention-mask mean including special tokens; content-token-weighted chunk average then L2",
+    "implementation": "all-content-nonoverlap-chunks-v1"
+  },
+  "encoder_fingerprint": "0a24110ad7256992a17fa56d917f652917b6a60390c58331135d20d3cfe6da07",
+  "cache_hits": 37662,
+  "cache_misses": 0,
+  "cache_path": "output/cache/minilm-0a24110ad7256992a17f.sqlite",
+  "chunks_encoded": 0,
+  "telemetry": {
+    "environment_before_import": "ORT_DISABLE_TELEMETRY=1",
+    "api_disable_called": true
+  },
+  "assets": {
+    "tokenizer": {
+      "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer.json",
+      "collected_at": "2026-10-28T08:00:10.461077+00:00",
+      "size_bytes": 466247,
+      "sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "file": "tokenizer.json",
+      "local_path": "output/model_assets/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer.json"
+    },
+    "onnx": {
+      "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/onnx/model_quint8_avx2.onnx",
+      "collected_at": "2026-10-28T08:00:16.801770+00:00",
+      "size_bytes": 23046789,
+      "sha256": "b941bf19f1f1283680f449fa6a7336bb5600bdcd5f84d10ddc5cd72218a0fd21",
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "file": "onnx/model_quint8_avx2.onnx",
+      "local_path": "output/model_assets/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/model_quint8_avx2.onnx"
+    }
+  },
+  "finished_at": "2026-10-28T08:59:58.323614+00:00",
+  "elapsed_seconds": 35.055,
+  "feature_count": 60000,
+  "embedding_dimension": 384,
+  "topics": 50,
+  "realized_topics": 50,
+  "outlier_rule": "cosine similarity to assigned normalized centroid below corpus quantile; assignments retained",
+  "outlier_threshold": 0.5765020847320557,
+  "outlier_count": 1884,
+  "outlier_fraction": 0.05002389676597101,
+  "silhouette_cosine_sample": 0.06479419767856598,
+  "silhouette_caution": "sampled internal clustering diagnostic, not topic correctness or optimal K",
+  "assignments_sha256": "8ccc7624734f0083f69d2ee41d3e8c9b68c332b018af7ea577db119bedce194d",
+  "vectors_sha256": "ad239f71e5b3dcc34cba713c3aee67b948ae5715c37bf2f8ccbef2fa20129fcf"
+}

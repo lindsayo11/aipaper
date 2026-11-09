@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-10-28T08:57:58.115130+00:00",
+  "paper_count": 43702,
+  "id_unique": true,
+  "review_count": 0,
+  "quarantine_count": 21,
+  "main_accepted": 37662,
+  "main_missing_abstract": 0,
+  "model_eligible": 37662,
+  "track_counts": {
+    "main": 37662,
+    "unknown": 3853,
+    "position": 506,
+    "datasets_benchmarks": 1681
+  },
+  "decision_counts": {
+    "accepted": 40208,
+    "unknown": 3494
+  },
+  "with_details": true,
+  "input_hashes": {
+    "bulk/papers.jsonl": "4b0fcb8cd1509012ecc335358ce935ac78041306bd7f18f90474ae0dd9e43b18",
+    "bulk/reviews.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bulk/ICLR-2024-quarantine.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bulk/ICLR-2025-quarantine.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bulk/ICLR-2026-quarantine.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bulk/ICML-2024-quarantine.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bulk/ICML-2025-quarantine.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bulk/ICML-2026-quarantine.jsonl": "a2f47afb96c9327028d750316749792ce63170cb05715a6dc1337d964d80d80d",
+    "bulk/NeurIPS-2024-quarantine.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bulk/NeurIPS-2025-quarantine.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bulk/NeurIPS-2026-quarantine.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "details/directory_papers.jsonl": "c95316a20e96c6cea599f6f73dbb896dd2c82a91b6121ce4d839d8b4a5fe3ffc",
+    "details/patches.jsonl": "43576bc8ca59c2c28e0a19b0f6ddaf8a8c963b940689809ea9571efde14baf41"
+  },
+  "papers_sha256": "6158c9ec943dc00049f101212fd12c58ced2f6681a539352fa25b5def905c232",
+  "title_conflicts_quarantined": 21,
+  "forum_identity_unique": true
+}

@@ -1,0 +1,19 @@
+{
+  "updated_at": "2026-10-28T08:56:28.919335+00:00",
+  "status": "completed",
+  "planned": 5014,
+  "attempted": 5014,
+  "successful": 5014,
+  "failed": 0,
+  "remaining": 0,
+  "main_missing_planned": 1670,
+  "main_repaired": 1670,
+  "main_abstract_repair_rate": 1.0,
+  "directory_new_papers": 3344,
+  "plan_sha256": "e708cfc7b881132ef3252e5935c46b30ce568c34133ff9845667da33d56366cc",
+  "counts_by_reason": {
+    "main_missing_abstract": 1670,
+    "directory_missing_from_bulk": 3344
+  },
+  "failure_note": "Every failed URL retained; terminal attempts do not imply successful coverage. No OpenReview requests made."
+}

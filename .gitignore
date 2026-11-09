@@ -1,0 +1,27 @@
+# 本地留档与超出 GitHub 单文件上限的发行包
+_v1_20261028/
+data_and_results.zip
+papers.csv
+source_complete.zip
+iclr_topic_rates_results.zip
+minilm_incremental_vector_cache.zip
+public_review_scores_and_evidence.zip
+
+# 与 reports/ data/ 下正式位置重复的根目录副本
+/report.html
+/iclr_topic_rates_report.html
+/iclr_metrics.csv
+
+# 已过期或属于过程文档
+DELIVERY_INDEX.md
+/EXECUTION_PLAN.md
+
+# 运行产物
+output/
+dist/
+build/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
