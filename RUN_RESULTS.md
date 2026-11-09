@@ -60,34 +60,11 @@
 - 最终ZIP CRC及逐文件SHA256由构建脚本再次验证，记录在release_manifest和各ZIP的MANIFEST.sha256.json。
 - 额外浏览器实交互尚未验证：环境无引擎，安装响应非有效ZIP；未将此记为通过。计划要求的静态脚本语法、HTML/URL安全与全量内嵌导出还原已通过，见browser_check.json。
 
-## 下载与重现
+## 重现
 
-最终交付：report.html、RUN_RESULTS.md、source_complete.zip、data_and_results.zip、release_manifest.json。阶段数据、详情、模型及分析检查点另行提供。完整源码阅读版在source_complete.zip内的SOURCE_READING.md；固定模型权重不重分发，首次下载说明和哈希见REPRODUCE。
+源码在 `src/ai_trends/`，复现步骤见 `docs/REPRODUCE.md`。报告 `reports/report.html` 单文件内嵌全量 CSV/JSONL 与统计表，断网可开。固定模型权重不重分发，首次下载的 revision 与 SHA256 见 REPRODUCE。
 
-report.html独立交付并内嵌全量CSV/JSONL和统计文件。数据包保留原始响应、清洗前后语料、模型向量和统计；可复用的稠密编码缓存独立在semantic_encoding_checkpoint.zip，避免相同向量重复膨胀。
-
-### 已完成阶段文件
-
-| 文件 | 持久文件ID | 下载 |
-| --- | --- | --- |
-| source_checkpoint.zip | libfile_95c065ed6b88819195007f093f9805e8 | [下载](https://chatgpt.com/library?file_id=libfile_95c065ed6b88819195007f093f9805e8&account_id=personal) |
-| bulk_snapshot.zip | libfile_60289549621c81919a4f4e0676c2677b | [下载](https://chatgpt.com/library?file_id=libfile_60289549621c81919a4f4e0676c2677b&account_id=personal) |
-| papers_bulk.csv | libfile_0afa17b843cc81919a2abba5f340a911 | [下载](https://chatgpt.com/library?file_id=libfile_0afa17b843cc81919a2abba5f340a911&account_id=personal) |
-| detail_checkpoint_01.zip | libfile_84920cf9f5dc8191988b9b540bb33ee0 | [下载](https://chatgpt.com/library?file_id=libfile_84920cf9f5dc8191988b9b540bb33ee0&account_id=personal) |
-| detail_checkpoint_02.zip | libfile_a2de8b8d7ff881919815f54d90168bfe | [下载](https://chatgpt.com/library?file_id=libfile_a2de8b8d7ff881919815f54d90168bfe&account_id=personal) |
-| detail_checkpoint_03_main_abstracts.zip | libfile_dc00515ba1b08191b4bbf086432b8e86 | [下载](https://chatgpt.com/library?file_id=libfile_dc00515ba1b08191b4bbf086432b8e86&account_id=personal) |
-| source_checkpoint_v2.zip | libfile_0d25b16c529c81918c2972ff4b298b0f | [下载](https://chatgpt.com/library?file_id=libfile_0d25b16c529c81918c2972ff4b298b0f&account_id=personal) |
-| detail_checkpoint_04.zip | libfile_1f03fa65ba1081919f053cd35a1c7175 | [下载](https://chatgpt.com/library?file_id=libfile_1f03fa65ba1081919f053cd35a1c7175&account_id=personal) |
-| bulk_snapshot_v2.zip | libfile_060342b2a3ac81918d7c37d7b34ecfcd | [下载](https://chatgpt.com/library?file_id=libfile_060342b2a3ac81918d7c37d7b34ecfcd&account_id=personal) |
-| semantic_encoding_checkpoint.zip | libfile_af35aa8f5f6c819189088a609f2ec705 | [下载](https://chatgpt.com/library?file_id=libfile_af35aa8f5f6c819189088a609f2ec705&account_id=personal) |
-| detail_checkpoint_final.zip | libfile_51606e8b7fd88191bcdf3f6a075bb4d8 | [下载](https://chatgpt.com/library?file_id=libfile_51606e8b7fd88191bcdf3f6a075bb4d8&account_id=personal) |
-| processed_snapshot.zip | libfile_3af09ce44bc081919f2a2b4db72f2629 | [下载](https://chatgpt.com/library?file_id=libfile_3af09ce44bc081919f2a2b4db72f2629&account_id=personal) |
-| lsa_results.zip | libfile_331bf18cf098819185a144cfbf558eb4 | [下载](https://chatgpt.com/library?file_id=libfile_331bf18cf098819185a144cfbf558eb4&account_id=personal) |
-| semantic_results.zip | libfile_846545597dd88191abdacc71eb572e18 | [下载](https://chatgpt.com/library?file_id=libfile_846545597dd88191abdacc71eb572e18&account_id=personal) |
-| analysis_results.zip | libfile_4f452e638bb4819184866ba9f4edc8e9 | [下载](https://chatgpt.com/library?file_id=libfile_4f452e638bb4819184866ba9f4edc8e9&account_id=personal) |
-| papers.csv | libfile_e0f32042eb108191b1822c9646c51ed1 | [下载](https://chatgpt.com/library?file_id=libfile_e0f32042eb108191b1822c9646c51ed1&account_id=personal) |
-
-最终文件ID与最新下载入口同时列于交付索引；以文件名/时间戳区分阶段，不把未完成检查点冒充最终数据。
+本仓库只放源码、报告与分析结果表。原始 HTTP 快照、清洗前后语料、模型向量合计约 513 MB，未纳入版本库（超出 GitHub 单文件上限），仅在本机留存。
 
 ---
 

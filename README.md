@@ -73,7 +73,7 @@ python scripts/build_release.py --output output --dist dist
 - `output/report.html`：单文件中文报告，内嵌全量论文和统计下载，浏览样本最多5000行。
 - `dist/`：阶段检查点、最终源码/数据包、逐文件SHA256和CRC验收。
 
-参见 [执行计划](docs/EXECUTION_PLAN.md)、[重现说明](docs/REPRODUCE.md)、[数据契约](docs/DATA_CONTRACT.md)、[来源口径](docs/OFFICIAL_SOURCES.md) 和 [验收约定](docs/ACCEPTANCE.md)。`SOURCE_READING.md`在最终构建时提供可搜索的全部源码阅读版。
+参见 [重现说明](docs/REPRODUCE.md)、[数据契约](docs/DATA_CONTRACT.md)、[来源口径](docs/OFFICIAL_SOURCES.md) 和 [验收约定](docs/ACCEPTANCE.md)。
 
 ## 已知边界
 
