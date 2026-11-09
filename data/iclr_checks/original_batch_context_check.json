@@ -1,0 +1,13 @@
+{
+  "experiment": "replay_the_original_two_encoding_phases_for_diagnostic_targets_only",
+  "expected_phase_papers": [
+    35992,
+    1670
+  ],
+  "papers_checked": 89,
+  "batches_replayed": 87,
+  "label_matches": 89,
+  "mean_similarity_error": 1.5403447526224545e-08,
+  "mismatches": [],
+  "model_fit_executed": false
+}

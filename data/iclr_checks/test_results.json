@@ -1,0 +1,7 @@
+{
+  "tests_run": 27,
+  "successful": true,
+  "failures": 0,
+  "errors": 0,
+  "numerical_diagnostic_note": "The strict fresh-batch parity test remains failed in its original record; exact original-context replay established center identity. These tests do not relabel that diagnostic as passed."
+}

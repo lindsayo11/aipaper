@@ -21,6 +21,7 @@
 1. `reports/report.html` — 主线中文报告，单文件离线，内嵌 22 个可下载的全量表，断网可开。
 2. `reports/iclr_topic_rates_report.html` — ICLR 公开投稿的 50 主题评分与条件接收率。
 3. `RUN_RESULTS.md` — 逐届对账、模型参数、验证结论，以及"哪些不能声称"。
+4. `scripts/iclr_topic_rates/` — 补充轮的完整过程代码：把 38,890 篇公开投稿投影到冻结的 50 主题空间，算评分与条件接收率。含口径说明与未通过的新分批校验记录。
 
 数据规模：9 个届次、5,014 个详情页全部补采成功、43,702 条规范化记录、37,662 篇进入模型。赛道分布 main 37,662 / unknown 3,853 / datasets_benchmarks 1,681 / position 506，隔离 21 条冲突记录。
 

@@ -1,0 +1,6 @@
+{
+  "javascript_syntax": "passed",
+  "real_browser_interaction": "not_tested_no_installed_browser",
+  "external_asset_dependencies": false,
+  "embedded_downloads": "generated_from_verified_CSV_bytes"
+}

@@ -1,0 +1,52 @@
+{
+  "status": "completed",
+  "created_at": "2026-10-28T11:35:36.568884+00:00",
+  "public_papers": 38890,
+  "reused_identical_text": 7331,
+  "new_submissions": 27572,
+  "revised_public_texts": 3987,
+  "encoded_texts": 31559,
+  "encoder": {
+    "encoder": {
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "weight_sha256": "b941bf19f1f1283680f449fa6a7336bb5600bdcd5f84d10ddc5cd72218a0fd21",
+      "tokenizer_sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+      "max_tokens": 256,
+      "pooling": "attention-mask mean including special tokens; content-token-weighted chunk average then L2",
+      "implementation": "all-content-nonoverlap-chunks-v1"
+    },
+    "encoder_fingerprint": "0a24110ad7256992a17fa56d917f652917b6a60390c58331135d20d3cfe6da07",
+    "cache_hits": 0,
+    "cache_misses": 31559,
+    "cache_path": "/workspace/scratch/b7d99bb24017/projection_20261028/encoding_contexts/743e34e5fa15c34ccff32e0715ac0a3f52321ef5ff753fefd07d4a3996210522/cache/minilm-0a24110ad7256992a17f.sqlite",
+    "chunks_encoded": 52578,
+    "telemetry": {
+      "environment_before_import": "ORT_DISABLE_TELEMETRY=1",
+      "api_disable_called": true
+    },
+    "encoding_sequence_fingerprint": "743e34e5fa15c34ccff32e0715ac0a3f52321ef5ff753fefd07d4a3996210522"
+  },
+  "centers_sha256": "3fe7f9e3f438e74c47e3d83ee41e4cc21d13886e7468c353d3137df143cd977c",
+  "centers_shape": [
+    50,
+    384
+  ],
+  "original_model_manifest_sha256": "b6d6291b97d404923132d1358ba4602ad5f58f5402b0e52e5d5c9782a82b1f44",
+  "original_assignment_table_sha256": "71f94df9c4d8a21f3e785ac261910cf706b75ed1fed44849c4bd0e1cb1805464",
+  "projection_plan_sha256": "f285d4c93327eaeb65def71de2ad6da6e7aa8e6b14c1564aa32c9cd52eb4bd67",
+  "model_fit_executed": false,
+  "original_assignment_table_unchanged": true,
+  "assigned_public_data_sha256": "4b7405e5637038e327bc94358eec5107997363e800962023493df314e84f8576",
+  "outlier_threshold": 0.5765020847320557,
+  "outlier_policy": "Retained in primary counts, matching original pipeline; flagged for sensitivity analysis.",
+  "revised_original_label_changes": 111,
+  "quantization_batch_sensitivity_observed": true,
+  "classification_precision_note": "Fresh-batch validation did not reproduce every historic label. Original-context replay confirmed the supplied center identity; fixed-input-sequence inference is exploratory and numerical sensitivity is retained in the audit files.",
+  "versions": {
+    "numpy": "2.3.5",
+    "scikit-learn": "1.8.0",
+    "onnxruntime": "1.31.1",
+    "tokenizers": "0.23.3"
+  }
+}
