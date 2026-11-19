@@ -66,6 +66,8 @@ OpenReview 403/平台验证会持久化阻断状态，同一运行不得重试�
 
 解压 source_complete.zip 作为项目目录，再把 data_and_results.zip 解压到项目的 output/。不发起网络请求也可 prepare --with-details、analyze、report、validate。重新训练 LSA 不需要下载模型。重新训练 ONNX 首次需上述固定权重；缓存向量和预训练文件不是同一内容。
 
+`data_and_results.zip` 不在版本库内，从 Release [`data-2026-11-19`](https://github.com/lindsayo11/aipaper/releases/tag/data-2026-11-19) 下载（537,695,500 B，SHA256 `69d86edeec4862727fea5b140a8d591ea4598d9c2c19767b83914a5f8e186420`）。源码目录等价于 `source_complete.zip`，直接 clone 本仓库即可，无需另取源码包。
+
 HTML报告内嵌全量CSV/JSONL和分析表，统计基于全量。浏览样本按会议/年份/赛道分层，最多5000行。导出按钮首先在浏览器本地尝试解压，浏览器不支持本地解压时保留gzip下载；页面不依赖CDN或远程服务。
 
 对于临时网络失败或已公开摘要此前为空的条目，可运行 `backfill --retry-failed`。旧失败写入attempts_history，平台验证和身份冲突仍保持终态；已有计划及成功补丁在prepare之后再次backfill时也不被删除。

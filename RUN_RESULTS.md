@@ -92,3 +92,4 @@
 - **主题命名**：`data/model/topic_review.csv`、`data/model_lsa/topic_review.csv` 记录 onnx/lsa 各 50 个主题的名称、任务、方法、数据模态与瓶颈，`review_status=human_verified`、`reviewed_by=lindsayo11`、`reviewed_at=2026-11-19`。依据为 `automatic_keywords` 与每个主题前十篇代表论文标题，由 AI 起草后经仓库所有者逐条审核确认。**本节取代上文"仍需人工命名复核"的表述。**
   - 边界：命名只描述主题内容，不构成模型正确性、最优 K 或跨模型编号可对齐的证明。
   - 未回写：包内 `output/models/*/topic_review.csv` 与 89 MB `report.html` 内嵌副本仍是 2026-11-09 的 `pending` 快照。回写会使 `report_embedded_exports_exact`（22 个内嵌导出逐字节比对）失败，必须连同报告一起重新生成，本轮未做。两处差异以 2026-11-19 的仓库文件为准。
+- **完整数据包已发布**：`data_and_results.zip`（537,695,500 B，SHA256 `69d86edeec4862727fea5b140a8d591ea4598d9c2c19767b83914a5f8e186420`）作为 Release 附件发布，标签 [`data-2026-11-19`](https://github.com/lindsayo11/aipaper/releases/tag/data-2026-11-19)。上文"仅在本机留存"的表述自本条起不再适用；GitHub 记录的 asset digest 与本机 SHA256 一致，直链可下载（Content-Length 537,695,500）。

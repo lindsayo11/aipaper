@@ -98,7 +98,7 @@ python scripts/build_release.py --output output --dist dist
 
 关于 `validation_run.log`：`validate` 阶段不向 stdout 打印任何内容（`src/ai_trends/cli.py` 只写 `validation.json`），因此包内同名文件为 0 字节是设计使然，不是漏写。执行级证据改用上面的 `logs/` 与 `runs/` 记录。
 
-2026-11-19 离线重跑结果：21 项全部 passed，退出码 0，耗时 20.09s；除 `generated_at` 与路径分隔符外，与原记录逐字段一致。原始 HTTP 快照、清洗前后语料、稠密向量合计约 513 MB，超过 GitHub 单文件上限，仍仅在本机 `data_and_results.zip` 留存，还原方式见 `docs/REPRODUCE.md`。
+2026-11-19 离线重跑结果：21 项全部 passed，退出码 0，耗时 20.09s；除 `generated_at` 与路径分隔符外，与原记录逐字段一致。原始 HTTP 快照、清洗前后语料、稠密向量合计约 513 MB，超出 GitHub 单文件上限，改以 Release 附件发布：[`data-2026-11-19`](https://github.com/lindsayo11/aipaper/releases/tag/data-2026-11-19)（537,695,500 B，SHA256 `69d86edeec4862727fea5b140a8d591ea4598d9c2c19767b83914a5f8e186420`，与 GitHub 记录的 asset digest 一致）。还原方式见 `docs/REPRODUCE.md`。
 
 ## 已知边界
 
