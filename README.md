@@ -76,6 +76,26 @@ python scripts/build_release.py --output output --dist dist
 
 参见 [重现说明](docs/REPRODUCE.md)、[数据契约](docs/DATA_CONTRACT.md)、[来源口径](docs/OFFICIAL_SOURCES.md) 和 [验收约定](docs/ACCEPTANCE.md)。
 
+## 仓库内的可核验证据
+
+`data/` 保存复核结论所需的派生证据（不含论文原文、原始 HTTP 快照与稠密向量）：
+
+| 路径 | 内容 |
+| --- | --- |
+| `data/validation.json` | 结构校验 21 项结果（2026-10-28 原始记录） |
+| `data/runs/` | 21 条阶段运行记录；末条为 2026-11-19 离线重跑 validate |
+| `data/logs/validate_2026-11-19.log` | 重跑的执行日志（环境版本、退出码、耗时、逐项结果） |
+| `data/model/` | onnx 后端：manifest、topics.json、逐论文 assignments.csv |
+| `data/model_lsa/` | lsa 后端同一批论文的 manifest、topics.json、assignments.csv |
+| `data/model_comparison/` | 两模型同语料比对（ARI 0.292 / AMI 0.500）与交集、列联表 |
+| `data/model_smoke_verification.json` | 模型冒烟检查 |
+| `data/analysis/`、`data/analysis_lsa/` | 逐后端主题份额、百分点变化、官方规模对账 |
+| `data/model/topic_review_draft.csv`、`data/model_lsa/topic_review_draft.csv` | 50 主题命名草稿，`review_status=ai_draft_pending_human`，尚未经人工确认 |
+
+关于 `validation_run.log`：`validate` 阶段不向 stdout 打印任何内容（`src/ai_trends/cli.py` 只写 `validation.json`），因此包内同名文件为 0 字节是设计使然，不是漏写。执行级证据改用上面的 `logs/` 与 `runs/` 记录。
+
+2026-11-19 离线重跑结果：21 项全部 passed，退出码 0，耗时 20.09s；除 `generated_at` 与路径分隔符外，与原记录逐字段一致。原始 HTTP 快照、清洗前后语料、稠密向量合计约 513 MB，超过 GitHub 单文件上限，仍仅在本机 `data_and_results.zip` 留存，还原方式见 `docs/REPRODUCE.md`。
+
 ## 已知边界
 
 本轮OpenReview首次notes请求返回HTTP403，已停止该通道；离线测试覆盖API1/2、分页与真实邀请量表的恢复能力，不表示实际评审采集成功。官网导航不能证明单篇赛道；2026 NeurIPS目录新增条目缺乏逐篇证据时保持unknown。自动主题词、相似度、silhouette与模型一致性都不是主题正确率或研究新颖性证明。

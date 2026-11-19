@@ -1,0 +1,314 @@
+{
+  "started_at": "2026-10-28T07:55:29.017592+00:00",
+  "config": {
+    "venues": [
+      "ICLR",
+      "ICML",
+      "NeurIPS"
+    ],
+    "years": [
+      2024,
+      2025,
+      2026
+    ],
+    "http": {
+      "min_interval": 0.35,
+      "timeout": 35,
+      "retries": 2,
+      "workers": 3
+    },
+    "model": {
+      "topics": 50,
+      "seed": 42,
+      "max_features": 60000,
+      "svd_components": 128,
+      "min_df": 4,
+      "outlier_quantile": 0.05
+    },
+    "semantic": {
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "onnx_file": "onnx/model_quint8_avx2.onnx",
+      "tokenizer_file": "tokenizer.json",
+      "batch_size": 32,
+      "max_tokens": 256,
+      "threads": 4
+    },
+    "report": {
+      "max_rows": 5000
+    }
+  },
+  "config_sha256": "32a0dc6f425e4bb739a5560937443b343854e863cf161d4e9d6145945233a20f",
+  "stage": "collect",
+  "status": "completed",
+  "result": [
+    {
+      "venue": "ICLR",
+      "year": 2024,
+      "source_url": "https://iclr.cc/virtual/2024/papers.html",
+      "status": "success",
+      "declared_json_urls": [
+        "https://iclr.cc/static/virtual/data/iclr-2024-orals-posters.json",
+        "https://iclr.cc/static/virtual/data/iclr-2024-abstracts.json"
+      ],
+      "page_snapshot": {
+        "url": "https://iclr.cc/virtual/2024/papers.html",
+        "final_url": "https://iclr.cc/virtual/2024/papers.html",
+        "collected_at": "2026-10-28T07:55:29.018288+00:00",
+        "http_status": 200,
+        "status": "success",
+        "size_bytes": 328409,
+        "sha256": "2ea3af51d22503e6c6991d48ea9c3df7c85c2dc83ff3a9890a608e1706d1969a",
+        "content_type": "text/html; charset=utf-8",
+        "body_path": "raw/http/fff3b4bd1e291562e40a5c6b0b876a3efeb9accfc3a96c77769868375bba95d2.body.gz"
+      },
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "venue": "ICLR",
+      "year": 2025,
+      "source_url": "https://iclr.cc/virtual/2025/papers.html",
+      "status": "success",
+      "declared_json_urls": [
+        "https://iclr.cc/static/virtual/data/iclr-2025-orals-posters.json",
+        "https://iclr.cc/static/virtual/data/iclr-2025-abstracts.json"
+      ],
+      "page_snapshot": {
+        "url": "https://iclr.cc/virtual/2025/papers.html",
+        "final_url": "https://iclr.cc/virtual/2025/papers.html",
+        "collected_at": "2026-10-28T07:55:38.925712+00:00",
+        "http_status": 200,
+        "status": "success",
+        "size_bytes": 524766,
+        "sha256": "baa628206b527089a721cf175eb1093cd89147dee30b97e6bef21e46ede2742e",
+        "content_type": "text/html; charset=utf-8",
+        "body_path": "raw/http/00789f8248e2bd48bf1b07cbdf581f0eb478e4ff83fa69296e45f0885c1ea6aa.body.gz"
+      },
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "venue": "ICLR",
+      "year": 2026,
+      "source_url": "https://iclr.cc/virtual/2026/papers.html",
+      "status": "success",
+      "declared_json_urls": [
+        "https://iclr.cc/static/virtual/data/iclr-2026-orals-posters.json",
+        "https://iclr.cc/static/virtual/data/iclr-2026-abstracts.json"
+      ],
+      "page_snapshot": {
+        "url": "https://iclr.cc/virtual/2026/papers.html",
+        "final_url": "https://iclr.cc/virtual/2026/papers.html",
+        "collected_at": "2026-10-28T07:55:49.352352+00:00",
+        "http_status": 200,
+        "status": "success",
+        "size_bytes": 758167,
+        "sha256": "eb358136f3e399d1e19bd7976b289cdf40a1274fe7182583b6be52823310b29a",
+        "content_type": "text/html; charset=utf-8",
+        "body_path": "raw/http/c7ba5798ca5c836ba9ba1790651aea26dee4a5d3081b3cc4683bcb6c92c2af3a.body.gz"
+      },
+      "json_snapshots": [
+        {
+          "url": "https://iclr.cc/static/virtual/data/iclr-2026-orals-posters.json",
+          "final_url": "https://iclr.cc/static/virtual/data/iclr-2026-orals-posters.json",
+          "collected_at": "2026-10-28T07:55:52.912031+00:00",
+          "http_status": 200,
+          "status": "success",
+          "size_bytes": 15031089,
+          "sha256": "064c43404a720a56ae51831dd6db48bfb58ec79f300f29b8d7cc8f889fcf1aca",
+          "content_type": "application/json",
+          "body_path": "raw/http/c49f1972efbb445b74c5e59b189921a884910140993e0a692a297179a7db32db.body.gz"
+        },
+        {
+          "url": "https://iclr.cc/static/virtual/data/iclr-2026-abstracts.json",
+          "final_url": "https://iclr.cc/static/virtual/data/iclr-2026-abstracts.json",
+          "collected_at": "2026-10-28T07:55:57.402227+00:00",
+          "http_status": 200,
+          "status": "success",
+          "size_bytes": 8118594,
+          "sha256": "2272dfefab54bb8de3736d43dcab3925be4db2c35fe2b75b59fbf90563844c41",
+          "content_type": "application/json",
+          "body_path": "raw/http/1f59d8559aa8f9e55a47da19cb8dff1c4df6ddd2ced0728a613424ccb589cd12.body.gz"
+        }
+      ]
+    },
+    {
+      "venue": "ICML",
+      "year": 2024,
+      "source_url": "https://icml.cc/virtual/2024/papers.html",
+      "status": "success",
+      "declared_json_urls": [
+        "https://icml.cc/static/virtual/data/icml-2024-orals-posters.json",
+        "https://icml.cc/static/virtual/data/icml-2024-abstracts.json"
+      ],
+      "page_snapshot": {
+        "url": "https://icml.cc/virtual/2024/papers.html",
+        "final_url": "https://icml.cc/virtual/2024/papers.html",
+        "collected_at": "2026-10-28T07:56:01.404894+00:00",
+        "http_status": 200,
+        "status": "success",
+        "size_bytes": 376797,
+        "sha256": "f30934cc7942c3439fdbe5f4851ed61e3fe97fcd03e90d467d50dd3600e4c1ea",
+        "content_type": "text/html; charset=utf-8",
+        "body_path": "raw/http/fd57081a5b8512de29000de1b96f789323dabaa7dbab77c64f671396a1c7cb11.body.gz"
+      },
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "venue": "ICML",
+      "year": 2025,
+      "source_url": "https://icml.cc/virtual/2025/papers.html",
+      "status": "success",
+      "declared_json_urls": [
+        "https://icml.cc/static/virtual/data/icml-2025-orals-posters.json",
+        "https://icml.cc/static/virtual/data/icml-2025-abstracts.json"
+      ],
+      "page_snapshot": {
+        "url": "https://icml.cc/virtual/2025/papers.html",
+        "final_url": "https://icml.cc/virtual/2025/papers.html",
+        "collected_at": "2026-10-28T07:56:12.171693+00:00",
+        "http_status": 200,
+        "status": "success",
+        "size_bytes": 470910,
+        "sha256": "6b5a9e024edcb851d6e189e704ee938813b80c9ef302bd9ca92fac118a0b4d18",
+        "content_type": "text/html; charset=utf-8",
+        "body_path": "raw/http/3d771388b7b69af58cecbc92a5376bd184d68079ad5bf93bdff7580be7a6268b.body.gz"
+      },
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "venue": "ICML",
+      "year": 2026,
+      "source_url": "https://icml.cc/virtual/2026/papers.html",
+      "status": "success",
+      "declared_json_urls": [
+        "https://icml.cc/static/virtual/data/icml-2026-orals-posters.json",
+        "https://icml.cc/static/virtual/data/icml-2026-abstracts.json"
+      ],
+      "page_snapshot": {
+        "url": "https://icml.cc/virtual/2026/papers.html",
+        "final_url": "https://icml.cc/virtual/2026/papers.html",
+        "collected_at": "2026-10-28T07:56:22.607168+00:00",
+        "http_status": 200,
+        "status": "success",
+        "size_bytes": 903785,
+        "sha256": "eb15606a50864b4b68da3fb6ac391f0881a211130ffc83fdf51392bc4ae718b9",
+        "content_type": "text/html; charset=utf-8",
+        "body_path": "raw/http/876ad5cefce2633aa5486a8a52bde131fb91de229bb3c4d59448adb3b4d1346e.body.gz"
+      },
+      "json_snapshots": [
+        {
+          "url": "https://icml.cc/static/virtual/data/icml-2026-orals-posters.json",
+          "final_url": "https://icml.cc/static/virtual/data/icml-2026-orals-posters.json",
+          "collected_at": "2026-10-28T07:56:25.727064+00:00",
+          "http_status": 200,
+          "status": "success",
+          "size_bytes": 16408466,
+          "sha256": "33a88df8976684e3a1ebe96d203a318b37ba41299daf31e72b5b4a7ab382eed2",
+          "content_type": "application/json",
+          "body_path": "raw/http/b9691f8d9810585ec00b4af594ccd3a3906110a3895ba1dedecd64b4b4df098d.body.gz"
+        },
+        {
+          "url": "https://icml.cc/static/virtual/data/icml-2026-abstracts.json",
+          "final_url": "https://icml.cc/static/virtual/data/icml-2026-abstracts.json",
+          "collected_at": "2026-10-28T07:56:30.195575+00:00",
+          "http_status": 200,
+          "status": "success",
+          "size_bytes": 8776249,
+          "sha256": "05f825de19a74b8a3e97c21784eef057934d4d8829ee555c0f3ecc54fc2d5ad7",
+          "content_type": "application/json",
+          "body_path": "raw/http/2b8808005fca1fdafc5144f14a9be77feeb0e8e6c6dea70c006fc4834ac4d717.body.gz"
+        }
+      ]
+    },
+    {
+      "venue": "NeurIPS",
+      "year": 2024,
+      "source_url": "https://neurips.cc/virtual/2024/papers.html",
+      "status": "success",
+      "declared_json_urls": [
+        "https://neurips.cc/static/virtual/data/neurips-2024-orals-posters.json",
+        "https://neurips.cc/static/virtual/data/neurips-2024-abstracts.json"
+      ],
+      "page_snapshot": {
+        "url": "https://neurips.cc/virtual/2024/papers.html",
+        "final_url": "https://neurips.cc/virtual/2024/papers.html",
+        "collected_at": "2026-10-28T07:56:34.278365+00:00",
+        "http_status": 200,
+        "status": "success",
+        "size_bytes": 617092,
+        "sha256": "86440a368b838cc9d3d0a8bbdc3e787bdd758dad8ae2b52185d9b998cd2ee635",
+        "content_type": "text/html; charset=utf-8",
+        "body_path": "raw/http/d82145df43b8888019f9920d7fb14b22780560beaba2db8e020138252a7e1b02.body.gz"
+      },
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "venue": "NeurIPS",
+      "year": 2025,
+      "source_url": "https://neurips.cc/virtual/2025/papers.html",
+      "status": "success",
+      "declared_json_urls": [
+        "https://neurips.cc/static/virtual/data/neurips-2025-orals-posters.json",
+        "https://neurips.cc/static/virtual/data/neurips-2025-abstracts.json"
+      ],
+      "page_snapshot": {
+        "url": "https://neurips.cc/virtual/2025/papers.html",
+        "final_url": "https://neurips.cc/virtual/2025/loc/san-diego/papers.html",
+        "collected_at": "2026-10-28T07:56:45.547794+00:00",
+        "http_status": 200,
+        "status": "success",
+        "size_bytes": 805782,
+        "sha256": "2dbcec0974cb7629cc27de185f61385861e985f5bbd357b5fb45c9643235b372",
+        "content_type": "text/html; charset=utf-8",
+        "body_path": "raw/http/0edb430923569ad04d6e6806bbb44390486eb4c4fd3b19057e484394a093531e.body.gz"
+      },
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "venue": "NeurIPS",
+      "year": 2026,
+      "source_url": "https://neurips.cc/virtual/2026/papers.html",
+      "status": "success",
+      "declared_json_urls": [
+        "https://neurips.cc/static/virtual/data/neurips-2026-orals-posters.json",
+        "https://neurips.cc/static/virtual/data/neurips-2026-abstracts.json"
+      ],
+      "page_snapshot": {
+        "url": "https://neurips.cc/virtual/2026/papers.html",
+        "final_url": "https://neurips.cc/virtual/2026/loc/sydney/papers.html",
+        "collected_at": "2026-10-28T07:57:00.507441+00:00",
+        "http_status": 200,
+        "status": "success",
+        "size_bytes": 1235672,
+        "sha256": "45066a5af36ed0830bfad1cede52340005edd7918501d82b1afff43c952eadb4",
+        "content_type": "text/html; charset=utf-8",
+        "body_path": "raw/http/342fb9b73bdef7591faeced0a6f8b58631e91b94aa6672f7fd78830628c8551d.body.gz"
+      },
+      "json_snapshots": [
+        {
+          "url": "https://neurips.cc/static/virtual/data/neurips-2026-orals-posters.json",
+          "final_url": "https://neurips.cc/static/virtual/data/neurips-2026-orals-posters.json",
+          "collected_at": "2026-10-28T07:57:08.046625+00:00",
+          "http_status": 200,
+          "status": "success",
+          "size_bytes": 19956307,
+          "sha256": "8174500ac95422773e4fcd327d9ef651c217021045eb7d46d03fbd580b85df59",
+          "content_type": "application/json",
+          "body_path": "raw/http/35ebd076bea1d05ad4ced4f5501ac67471d2787ecb13a0df945c82c4b081e1be.body.gz"
+        },
+        {
+          "url": "https://neurips.cc/static/virtual/data/neurips-2026-abstracts.json",
+          "final_url": "https://neurips.cc/static/virtual/data/neurips-2026-abstracts.json",
+          "collected_at": "2026-10-28T07:57:12.065104+00:00",
+          "http_status": 200,
+          "status": "success",
+          "size_bytes": 9238025,
+          "sha256": "6991e87263b0b8f9387daa7cd34313e27dc0ec5531b255aa911972f5c8a76aa3",
+          "content_type": "application/json",
+          "body_path": "raw/http/7eb4decd40586fee9e25904b1092004e117877bdf5ff0c1ac860d3a07c3dcf57.body.gz"
+        }
+      ]
+    }
+  ],
+  "finished_at": "2026-10-28T07:57:15.609781+00:00"
+}

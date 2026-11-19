@@ -1,0 +1,15 @@
+﻿venue,year,source_id,official_accepted,official_accepted_lower_bound,observed_main_accepted,missing_abstract,assigned_papers,difference_observed_minus_official,coverage_ratio,source_url,source_level,preferred,approximate,status
+ICLR,2024,ICLR2024-factsheet,2260,,2260,0,2260,0,1.0,https://media.iclr.cc/Conferences/ICLR2024/ICLR2024-Fact_Sheet.pdf,conference_fact_sheet,True,False,no_large_gap_detected
+ICLR,2025,ICLR2025-factsheet,3704,,3708,0,3708,4,1.0010799136069115,https://media.iclr.cc/Conferences/ICLR2025/ICLR2025_Fact_Sheet.pdf,conference_fact_sheet,True,False,no_large_gap_detected
+ICLR,2026,ICLR2026-factsheet,5357,,5353,0,5353,-4,0.9992533134216912,https://media.iclr.cc/Conferences/ICLR2026/ICLR2026_Fact_Sheet.pdf,conference_fact_sheet,True,False,no_large_gap_detected
+ICLR,2026,ICLR2026-retrospective,5355,,5353,0,5353,-2,0.9996265172735761,https://blog.iclr.cc/2026/03/31/a-retrospective-on-the-iclr-2026-review-process/,conference_blog,False,False,no_large_gap_detected
+ICML,2024,ICML2024-factsheet,,2600,2535,0,2535,,,https://media.icml.cc/Conferences/ICML2024/ICML2024_Fact_Sheet.pdf,conference_fact_sheet,False,True,unavailable_reference
+ICML,2024,ICML2024-institution,2609,,2535,0,2535,-74,0.971636642391721,https://aip.riken.jp/news/icml2024/?lang=en,institutional_restatement,True,False,no_large_gap_detected
+ICML,2025,ICML2025-factsheet,3260,,3258,0,3258,-2,0.9993865030674847,https://media.icml.cc/Conferences/ICML2025/ICML2025_Fact_Sheet.pdf,conference_fact_sheet,True,False,no_large_gap_detected
+ICML,2025,ICML2025-institution,3260,,3258,0,3258,-2,0.9993865030674847,https://aip.riken.jp/news/icml2025/,institutional_restatement,False,False,no_large_gap_detected
+ICML,2026,ICML2026-factsheet,6552,,6341,0,6341,-211,0.9677960927960928,https://media.icml.cc/Conferences/ICML2026/ICML2026_Fact_Sheet.pdf,conference_fact_sheet,True,False,no_large_gap_detected
+ICML,2026,ICML2026-institution,6352,,6341,0,6341,-11,0.9982682619647355,https://aip.riken.jp/news/icml2026/,institutional_restatement,False,False,no_large_gap_detected
+NeurIPS,2024,NeurIPS2024-factsheet,4037,,4035,0,4035,-2,0.9995045826108496,https://media.neurips.cc/Conferences/NeurIPS2024/NeurIPS2024-Fact_Sheet.pdf,conference_fact_sheet,True,False,no_large_gap_detected
+NeurIPS,2025,NeurIPS2025-factsheet,5290,,5287,0,5287,-3,0.9994328922495274,https://media.neurips.cc/Conferences/NeurIPS2025/press/NeurIPS2025-Fact_Sheet.pdf,conference_fact_sheet,False,False,no_large_gap_detected
+NeurIPS,2025,NeurIPS2025-retrospective,5290,,5287,0,5287,-3,0.9994328922495274,https://blog.neurips.cc/2025/09/30/reflections-on-the-2025-review-process-from-the-program-committee-chairs/,conference_blog,True,False,no_large_gap_detected
+NeurIPS,2026,NeurIPS2026-institution,7900,,4885,0,4885,-3015,0.6183544303797468,https://aip.riken.jp/news/neurips2026/?lang=en,institutional_restatement,True,False,partial_sample

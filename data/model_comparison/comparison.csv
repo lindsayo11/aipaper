@@ -1,0 +1,2 @@
+﻿created_at,lsa_papers,onnx_papers,intersection_papers,lsa_only,onnx_only,same_corpus,same_text_fingerprint,ari,ami,interpretation
+2026-10-28T09:00:35.385783+00:00,37662,37662,37662,0,0,True,True,0.2917832177879984,0.5000982617351464,"Partition agreement on identical paper IDs. Not topic quality, accuracy, or evidence of optimal K."

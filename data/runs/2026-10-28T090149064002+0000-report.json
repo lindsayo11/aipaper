@@ -1,0 +1,58 @@
+{
+  "started_at": "2026-10-28T09:01:49.064019+00:00",
+  "config": {
+    "venues": [
+      "ICLR",
+      "ICML",
+      "NeurIPS"
+    ],
+    "years": [
+      2024,
+      2025,
+      2026
+    ],
+    "http": {
+      "min_interval": 0.35,
+      "timeout": 35,
+      "retries": 2,
+      "workers": 3
+    },
+    "model": {
+      "topics": 50,
+      "seed": 42,
+      "max_features": 60000,
+      "svd_components": 128,
+      "min_df": 4,
+      "outlier_quantile": 0.05
+    },
+    "semantic": {
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "onnx_file": "onnx/model_quint8_avx2.onnx",
+      "tokenizer_file": "tokenizer.json",
+      "batch_size": 32,
+      "max_tokens": 256,
+      "threads": 4
+    },
+    "report": {
+      "max_rows": 5000
+    }
+  },
+  "config_sha256": "32a0dc6f425e4bb739a5560937443b343854e863cf161d4e9d6145945233a20f",
+  "stage": "report",
+  "status": "completed",
+  "result": {
+    "status": "completed",
+    "path": "output/report.html",
+    "backend": "onnx",
+    "total_papers": 43702,
+    "observed_main_accepted": 37662,
+    "model_eligible": 37662,
+    "assigned_papers": 37662,
+    "browser_sample_rows": 5000,
+    "embedded_exports": 22,
+    "size_bytes": 89561246,
+    "sha256": "fd891f20d5dfced9c0e63da2843b903b8d8965f227d2732f393c5481626f08a6"
+  },
+  "finished_at": "2026-10-28T09:02:01.250444+00:00"
+}

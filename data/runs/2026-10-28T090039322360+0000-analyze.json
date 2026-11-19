@@ -1,0 +1,169 @@
+{
+  "started_at": "2026-10-28T09:00:39.322380+00:00",
+  "config": {
+    "venues": [
+      "ICLR",
+      "ICML",
+      "NeurIPS"
+    ],
+    "years": [
+      2024,
+      2025,
+      2026
+    ],
+    "http": {
+      "min_interval": 0.35,
+      "timeout": 35,
+      "retries": 2,
+      "workers": 3
+    },
+    "model": {
+      "topics": 50,
+      "seed": 42,
+      "max_features": 60000,
+      "svd_components": 128,
+      "min_df": 4,
+      "outlier_quantile": 0.05
+    },
+    "semantic": {
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "onnx_file": "onnx/model_quint8_avx2.onnx",
+      "tokenizer_file": "tokenizer.json",
+      "batch_size": 32,
+      "max_tokens": 256,
+      "threads": 4
+    },
+    "report": {
+      "max_rows": 5000
+    }
+  },
+  "config_sha256": "32a0dc6f425e4bb739a5560937443b343854e863cf161d4e9d6145945233a20f",
+  "stage": "analyze",
+  "status": "completed",
+  "result": {
+    "generated_at": "2026-10-28T09:00:42.221441+00:00",
+    "backend": "onnx",
+    "status": "completed_with_public_review_limitations",
+    "counts": {
+      "papers": 43702,
+      "main_accepted": 37662,
+      "modeled": 37662,
+      "formal_reviews_observed": 0,
+      "valid_score_strata": 0,
+      "topics": 50,
+      "statistics_sources": 14
+    },
+    "heatmap_years": [
+      2024,
+      2025
+    ],
+    "heatmap_exclusions": [
+      {
+        "year": 2026,
+        "reason": "NeurIPS: observed/registered < 0.90",
+        "venue_details": [
+          {
+            "venue": "ICLR",
+            "observed_main_accepted": 5353,
+            "registered_accepted": 5357,
+            "coverage_ratio": 0.9992533134216912,
+            "source_level": "conference_fact_sheet",
+            "source_url": "https://media.iclr.cc/Conferences/ICLR2026/ICLR2026_Fact_Sheet.pdf"
+          },
+          {
+            "venue": "ICML",
+            "observed_main_accepted": 6341,
+            "registered_accepted": 6552,
+            "coverage_ratio": 0.9677960927960928,
+            "source_level": "conference_fact_sheet",
+            "source_url": "https://media.icml.cc/Conferences/ICML2026/ICML2026_Fact_Sheet.pdf"
+          },
+          {
+            "venue": "NeurIPS",
+            "observed_main_accepted": 4885,
+            "registered_accepted": 7900,
+            "coverage_ratio": 0.6183544303797468,
+            "source_level": "institutional_restatement",
+            "source_url": "https://aip.riken.jp/news/neurips2026/?lang=en"
+          }
+        ]
+      }
+    ],
+    "coverage_gate": 0.9,
+    "coverage_gate_note": "明显缺口筛选，不是网络完整性或完整提交队列认证。冲突同口径来源取最大录用数作排除检验。",
+    "share_denominator": "all_observed_main_accepted_in_venue_year_including_missing_abstracts",
+    "change_unit": "percentage_points",
+    "scores_status": "not_computable",
+    "score_unavailable_reason": "未采到可合法解析且有量表及阶段的公开正式评审；零条评审不是零分。评审通道状态见 source_coverage。",
+    "conditional_acceptance_status": "not_estimable",
+    "conditional_acceptance_reason": "缺少事先独立完整决定队列证明；节目册录用名单与自愿公开样本不能作为全部投稿分母。",
+    "bias_notes": [
+      "仅录用成果，存在选择偏差与时滞，不能推断投稿分布或选题录用优势。",
+      "自动主题词与编号需人工复核，跨模型编号不可直接对齐。",
+      "官方总录用率保留来源原分母；未由实采录用论文数反推。"
+    ],
+    "inputs": {
+      "papers_sha256": "6158c9ec943dc00049f101212fd12c58ced2f6681a539352fa25b5def905c232",
+      "reviews_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assignments_sha256": "8ccc7624734f0083f69d2ee41d3e8c9b68c332b018af7ea577db119bedce194d",
+      "model_manifest_sha256": "b6d6291b97d404923132d1358ba4602ad5f58f5402b0e52e5d5c9782a82b1f44",
+      "statistics_config_sha256": "43d49b081cdd292326a0414439b60d03b4e9c85f17001d1e550f2196b7304349"
+    },
+    "files": {
+      "official_statistics": {
+        "rows": 14,
+        "csv_sha256": "ca20a027df5b9738adbfc1148962806fef14cff9bf0cb26d66c2f09c8151936c",
+        "json_sha256": "87452fa099a5136844e93beee2d7739c968cca5ac8de69ba751e87e0ea94c1b0"
+      },
+      "reconciliation": {
+        "rows": 14,
+        "csv_sha256": "5dd0bcb5452ac4f3e76cbc724eac8e28ef67700001e10fae650ea3901f73cf9d",
+        "json_sha256": "16695469fa364373a76c2ca3be643ba42ef123f93211669be70e74bf64232bb8"
+      },
+      "topic_trends": {
+        "rows": 450,
+        "csv_sha256": "b1310d9d4f10af3df2f65919f387236543cabb4a34d1f589ad819a407a06e4bc",
+        "json_sha256": "435f8494f121e12eb96a52a04ebfdaaa3aa09003f1b58f82d57a018438ac0339"
+      },
+      "topic_changes": {
+        "rows": 300,
+        "csv_sha256": "efbc80827f3528d4d65b967419ab52b03d1b3d2c18dcb6e03f0fef97e8fc209d",
+        "json_sha256": "dc788816357f72f077571fa0442bbb1063eff3dbdbb305ca200ae5a1f675daa2"
+      },
+      "heatmap": {
+        "rows": 300,
+        "csv_sha256": "cf8593f0f6b162113a78ee36e2c353e8146c4601a1957f154d88e3cfb556573b",
+        "json_sha256": "0c2d10e0c9d4600debc6283e7a74f12ae37c10359273e936d6cdba2253b9e79f"
+      },
+      "scores": {
+        "rows": 0,
+        "csv_sha256": "1830ffe026a6a29530396d282b8f12ded591ac58e17b97c58a45b53037c3593f",
+        "json_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      "decision_samples": {
+        "rows": 9,
+        "csv_sha256": "64b1ba68d1a1b4a2daed971fc668a9a225ef1591e58334d03b36a339120e3f38",
+        "json_sha256": "9ea9362ea31dfb69f859575abea5e920111047ccd2f5f63e478312a8b6a3b429"
+      }
+    },
+    "statistics_source_level_counts": {
+      "conference_fact_sheet": 8,
+      "conference_blog": 2,
+      "institutional_restatement": 4
+    },
+    "statistics_missing_cohorts": [],
+    "preferred_statistics_sources": [
+      "ICLR2024-factsheet",
+      "ICLR2025-factsheet",
+      "ICLR2026-factsheet",
+      "ICML2024-institution",
+      "ICML2025-factsheet",
+      "ICML2026-factsheet",
+      "NeurIPS2024-factsheet",
+      "NeurIPS2025-retrospective",
+      "NeurIPS2026-institution"
+    ]
+  },
+  "finished_at": "2026-10-28T09:00:42.478720+00:00"
+}

@@ -1,0 +1,50 @@
+==============================================================================
+ai_trends validate —— 离线重跑记录（2026-11-19）
+开始(UTC)   : 2026-11-19T02:56:40.949889+00:00
+工作目录    : D:\aipaper_handoff
+项目目录    : C:\Users\linds\Desktop\aipaper
+输出目录    : output（相对工作目录）
+解释器      : C:\Users\linds\.workbuddy\binaries\python\envs\aipaper\Scripts\python.exe
+命令行      : python scripts/run.py --config <proj>/configs/latest.json --output output validate
+numpy/scikit-learn/scipy : 2.3.5 / 1.8.0 / 1.17.0
+node        : v22.22.2
+网络        : 未使用（validate 只读本地产物，无 HTTP 请求）
+------------------------------------------------------------------------------
+退出码      : 0
+耗时        : 20.09s
+stdout 字节 : 0   （该阶段设计上不打印，故为 0）
+stderr 字节 : 0
+--- stdout ---
+(空)
+--- stderr ---
+(空)
+------------------------------------------------------------------------------
+validation.json generated_at : 2026-11-19T02:57:03.529302+00:00
+structural_status            : passed
+checks                       : 21/21 passed
+  [passed] nine_explicit_source_states
+  [passed] http_snapshot_hashes_read_back
+  [passed] paper_ids_unique
+  [passed] venue_year_forum_identities_unique
+  [passed] display_ids_not_used_as_forums
+  [passed] paper_schema_and_author_keywords
+  [passed] lsa_all_eligible_ids_assigned
+  [passed] lsa_actually_completed
+  [passed] lsa_topic_totals_match
+  [passed] lsa_analysis_exists
+  [passed] onnx_all_eligible_ids_assigned
+  [passed] onnx_actually_completed
+  [passed] onnx_topic_totals_match
+  [passed] onnx_analysis_exists
+  [passed] both_models_compare_identical_corpus
+  [passed] only_scale_legal_scores
+  [passed] no_unproved_conditional_acceptance_rates
+  [passed] detail_plan_all_terminal
+  [passed] report_embedded_exports_exact
+  [passed] report_javascript_syntax
+  [passed] report_has_no_external_resources
+------------------------------------------------------------------------------
+与 2026-10-28 原始记录对比（忽略 generated_at 与路径分隔符）：
+  判定与证据数值是否一致 : True
+结束(UTC)   : 2026-11-19T02:57:04.045435+00:00
+==============================================================================

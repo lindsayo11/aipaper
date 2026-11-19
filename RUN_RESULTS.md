@@ -79,3 +79,14 @@
 - **口径**：论文内先求均值，再在同届同主题按论文等权平均。条件录用率仍为 `not_estimable`（三会统筹所需的独立完整决定队列未建立）；ICLR 三届的单独口径见 `iclr_topic_rates_report.html`，不与本表混用。
 - **影响**：`report.html` 已重新生成，评分章节由"不可计算"改为 350 行明细表并标注来源与量表差异。`processed/reviews.jsonl` 仍为 0 条，主线实时通道受阻的事实未被改写。
 - **新版报告**：sha256 `f4b303eb3f9d9b4858a32e97524b718f48e6d6d5c775cec0db21252def800ec9`，89,624,737 字节，已纳入 `data_and_results.zip`（此前包内没有主报告）。
+
+---
+
+## 补充：离线重跑校验（2026-11-19）
+
+- **目的**：确认 `validation.json` 可从本机产物复现，并补上此前缺失的执行记录。
+- **方式**：把 `data_and_results.zip` 完整解包到 `output/`（10,377 个文件），在无网络条件下执行 `validate`；环境 numpy 2.3.5 / scikit-learn 1.8.0 / scipy 1.17.0，Node v22.22.2。
+- **结果**：**21 项全部 passed**，退出码 0，耗时 20.09s（另一次 21.39s）。
+- **与原记录比对**：除 `generated_at` 与路径分隔符（原文 `/`，Windows 为 `\`）外逐字段一致，判定与证据数值均未改变。校验依赖的 5,075 份成功快照哈希回读、22 个内嵌导出逐字节比对均通过。
+- **`validation_run.log` 为何是 0 字节**：`validate` 阶段只写 `validation.json`，不向 stdout 打印（见 `src/ai_trends/cli.py`），重跑同样不产生 stdout。因此执行级证据改为 `data/logs/validate_2026-11-19.log` 与 `data/runs/*-validate.json`，未用空文件充作日志。
+- **主题命名**：`data/model/topic_review_draft.csv`、`data/model_lsa/topic_review_draft.csv` 为按 `automatic_keywords` 与代表论文起草的 50 主题命名草稿，`review_status=ai_draft_pending_human`。**尚未经人工确认**，正文"主题标签仍为自动关键词"的结论在人工确认前保持不变。

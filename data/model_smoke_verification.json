@@ -1,0 +1,198 @@
+{
+  "status": "passed",
+  "first_run": {
+    "status": "completed",
+    "started_at": "2026-10-28T08:04:22.636679+00:00",
+    "backend": "onnx",
+    "actual_backend": "MiniLM-quantized-ONNX-mask-pooling-chunked-L2-KMeans",
+    "optional_backends": {
+      "BERTopic": "not_executed",
+      "HDBSCAN": "not_executed"
+    },
+    "shared_space": true,
+    "text_fields": [
+      "title",
+      "abstract"
+    ],
+    "corpus_filter": {
+      "track": "main",
+      "decision": "accepted",
+      "title": "nonempty",
+      "abstract": "nonempty"
+    },
+    "input_papers": 18,
+    "processed_input_sha256": "6cb1940787913d94a16bb52f29175f3336b61a1a0242b6aec662569fb6975557",
+    "corpus_fingerprint": "ed92e17acb1fbdd5072f76c834bbf7f9fa4f6fba42917f7535317be8833e7ac8",
+    "paper_id_fingerprint": "188288d2cc4902bdd4619bdd5268d4ce2ac1ef5b61e69f311eacf3cc25589439",
+    "configuration_fingerprint": "30fd08fc3097e56535a48f0e82e12a8b9de7ec345fba1753cc44fcbf9efd54ef",
+    "model_parameters": {
+      "topics": 3,
+      "seed": 42,
+      "max_features": 3000,
+      "svd_components": 12,
+      "min_df": 1,
+      "outlier_quantile": 0.05
+    },
+    "seed": 42,
+    "versions": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "scikit-learn": "1.8.0",
+      "onnxruntime": "1.31.1",
+      "tokenizers": "0.23.3"
+    },
+    "automatic_labels_need_human_review": true,
+    "encoder": {
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "weight_sha256": "b941bf19f1f1283680f449fa6a7336bb5600bdcd5f84d10ddc5cd72218a0fd21",
+      "tokenizer_sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+      "max_tokens": 256,
+      "pooling": "attention-mask mean including special tokens; content-token-weighted chunk average then L2",
+      "implementation": "all-content-nonoverlap-chunks-v1"
+    },
+    "encoder_fingerprint": "0a24110ad7256992a17fa56d917f652917b6a60390c58331135d20d3cfe6da07",
+    "cache_hits": 0,
+    "cache_misses": 18,
+    "cache_path": "/workspace/scratch/2b89348eee30/ai-paper-trends/minilm-smoke-lw60ys31/cache/minilm-0a24110ad7256992a17f.sqlite",
+    "chunks_encoded": 29,
+    "telemetry": {
+      "environment_before_import": "ORT_DISABLE_TELEMETRY=1",
+      "api_disable_called": true
+    },
+    "assets": {
+      "tokenizer": {
+        "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer.json",
+        "collected_at": "2026-10-28T08:00:10.461077+00:00",
+        "size_bytes": 466247,
+        "sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+        "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+        "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "file": "tokenizer.json",
+        "local_path": "/workspace/scratch/2b89348eee30/ai-paper-trends/minilm-smoke-lw60ys31/model_assets/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer.json"
+      },
+      "onnx": {
+        "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/onnx/model_quint8_avx2.onnx",
+        "collected_at": "2026-10-28T08:00:16.801770+00:00",
+        "size_bytes": 23046789,
+        "sha256": "b941bf19f1f1283680f449fa6a7336bb5600bdcd5f84d10ddc5cd72218a0fd21",
+        "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+        "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "file": "onnx/model_quint8_avx2.onnx",
+        "local_path": "/workspace/scratch/2b89348eee30/ai-paper-trends/minilm-smoke-lw60ys31/model_assets/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/model_quint8_avx2.onnx"
+      }
+    },
+    "finished_at": "2026-10-28T08:04:25.476138+00:00",
+    "elapsed_seconds": 2.839,
+    "feature_count": 3000,
+    "embedding_dimension": 384,
+    "topics": 3,
+    "realized_topics": 3,
+    "outlier_rule": "cosine similarity to assigned normalized centroid below corpus quantile; assignments retained",
+    "outlier_threshold": 0.5382900834083557,
+    "outlier_count": 1,
+    "outlier_fraction": 0.05555555555555555,
+    "silhouette_cosine_sample": 0.06874604523181915,
+    "silhouette_caution": "sampled internal clustering diagnostic, not topic correctness or optimal K",
+    "assignments_sha256": "59235ea41445504b2b0bcd8ce68649f1d6d5d8ad77841466d3e395de8a2fcc1d",
+    "vectors_sha256": "fc87c3cdfdd19df33aef2434afbfe9312460d28a30c64c6e4c294dd7f41ef6eb"
+  },
+  "second_run": {
+    "status": "completed",
+    "started_at": "2026-10-28T08:04:25.478236+00:00",
+    "backend": "onnx",
+    "actual_backend": "MiniLM-quantized-ONNX-mask-pooling-chunked-L2-KMeans",
+    "optional_backends": {
+      "BERTopic": "not_executed",
+      "HDBSCAN": "not_executed"
+    },
+    "shared_space": true,
+    "text_fields": [
+      "title",
+      "abstract"
+    ],
+    "corpus_filter": {
+      "track": "main",
+      "decision": "accepted",
+      "title": "nonempty",
+      "abstract": "nonempty"
+    },
+    "input_papers": 18,
+    "processed_input_sha256": "6cb1940787913d94a16bb52f29175f3336b61a1a0242b6aec662569fb6975557",
+    "corpus_fingerprint": "ed92e17acb1fbdd5072f76c834bbf7f9fa4f6fba42917f7535317be8833e7ac8",
+    "paper_id_fingerprint": "188288d2cc4902bdd4619bdd5268d4ce2ac1ef5b61e69f311eacf3cc25589439",
+    "configuration_fingerprint": "30fd08fc3097e56535a48f0e82e12a8b9de7ec345fba1753cc44fcbf9efd54ef",
+    "model_parameters": {
+      "topics": 3,
+      "seed": 42,
+      "max_features": 3000,
+      "svd_components": 12,
+      "min_df": 1,
+      "outlier_quantile": 0.05
+    },
+    "seed": 42,
+    "versions": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "scikit-learn": "1.8.0",
+      "onnxruntime": "1.31.1",
+      "tokenizers": "0.23.3"
+    },
+    "automatic_labels_need_human_review": true,
+    "encoder": {
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "weight_sha256": "b941bf19f1f1283680f449fa6a7336bb5600bdcd5f84d10ddc5cd72218a0fd21",
+      "tokenizer_sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+      "max_tokens": 256,
+      "pooling": "attention-mask mean including special tokens; content-token-weighted chunk average then L2",
+      "implementation": "all-content-nonoverlap-chunks-v1"
+    },
+    "encoder_fingerprint": "0a24110ad7256992a17fa56d917f652917b6a60390c58331135d20d3cfe6da07",
+    "cache_hits": 18,
+    "cache_misses": 0,
+    "cache_path": "/workspace/scratch/2b89348eee30/ai-paper-trends/minilm-smoke-lw60ys31/cache/minilm-0a24110ad7256992a17f.sqlite",
+    "chunks_encoded": 0,
+    "telemetry": {
+      "environment_before_import": "ORT_DISABLE_TELEMETRY=1",
+      "api_disable_called": true
+    },
+    "assets": {
+      "tokenizer": {
+        "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer.json",
+        "collected_at": "2026-10-28T08:00:10.461077+00:00",
+        "size_bytes": 466247,
+        "sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+        "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+        "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "file": "tokenizer.json",
+        "local_path": "/workspace/scratch/2b89348eee30/ai-paper-trends/minilm-smoke-lw60ys31/model_assets/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer.json"
+      },
+      "onnx": {
+        "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/onnx/model_quint8_avx2.onnx",
+        "collected_at": "2026-10-28T08:00:16.801770+00:00",
+        "size_bytes": 23046789,
+        "sha256": "b941bf19f1f1283680f449fa6a7336bb5600bdcd5f84d10ddc5cd72218a0fd21",
+        "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+        "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "file": "onnx/model_quint8_avx2.onnx",
+        "local_path": "/workspace/scratch/2b89348eee30/ai-paper-trends/minilm-smoke-lw60ys31/model_assets/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/model_quint8_avx2.onnx"
+      }
+    },
+    "finished_at": "2026-10-28T08:04:25.742785+00:00",
+    "elapsed_seconds": 0.265,
+    "feature_count": 3000,
+    "embedding_dimension": 384,
+    "topics": 3,
+    "realized_topics": 3,
+    "outlier_rule": "cosine similarity to assigned normalized centroid below corpus quantile; assignments retained",
+    "outlier_threshold": 0.5382900834083557,
+    "outlier_count": 1,
+    "outlier_fraction": 0.05555555555555555,
+    "silhouette_cosine_sample": 0.06874604523181915,
+    "silhouette_caution": "sampled internal clustering diagnostic, not topic correctness or optimal K",
+    "assignments_sha256": "59235ea41445504b2b0bcd8ce68649f1d6d5d8ad77841466d3e395de8a2fcc1d",
+    "vectors_sha256": "fc87c3cdfdd19df33aef2434afbfe9312460d28a30c64c6e4c294dd7f41ef6eb"
+  },
+  "note": "18 real accepted-main papers; smoke assignments temporary, full-corpus run separate."
+}

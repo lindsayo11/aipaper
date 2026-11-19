@@ -1,0 +1,304 @@
+{
+  "started_at": "2026-10-28T09:02:01.310957+00:00",
+  "config": {
+    "venues": [
+      "ICLR",
+      "ICML",
+      "NeurIPS"
+    ],
+    "years": [
+      2024,
+      2025,
+      2026
+    ],
+    "http": {
+      "min_interval": 0.35,
+      "timeout": 35,
+      "retries": 2,
+      "workers": 3
+    },
+    "model": {
+      "topics": 50,
+      "seed": 42,
+      "max_features": 60000,
+      "svd_components": 128,
+      "min_df": 4,
+      "outlier_quantile": 0.05
+    },
+    "semantic": {
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "onnx_file": "onnx/model_quint8_avx2.onnx",
+      "tokenizer_file": "tokenizer.json",
+      "batch_size": 32,
+      "max_tokens": 256,
+      "threads": 4
+    },
+    "report": {
+      "max_rows": 5000
+    }
+  },
+  "config_sha256": "32a0dc6f425e4bb739a5560937443b343854e863cf161d4e9d6145945233a20f",
+  "stage": "validate",
+  "status": "completed",
+  "result": {
+    "generated_at": "2026-10-28T09:02:12.196983+00:00",
+    "structural_status": "passed",
+    "checks": [
+      {
+        "name": "nine_explicit_source_states",
+        "status": "passed",
+        "evidence": {
+          "expected": 9,
+          "observed": 9
+        }
+      },
+      {
+        "name": "http_snapshot_hashes_read_back",
+        "status": "passed",
+        "evidence": {
+          "successful_snapshots": 5075,
+          "failed_or_blocked_requests": 8,
+          "errors": []
+        }
+      },
+      {
+        "name": "paper_ids_unique",
+        "status": "passed",
+        "evidence": {
+          "papers": 43702
+        }
+      },
+      {
+        "name": "venue_year_forum_identities_unique",
+        "status": "passed",
+        "evidence": {
+          "records_with_forum": 40455
+        }
+      },
+      {
+        "name": "display_ids_not_used_as_forums",
+        "status": "passed",
+        "evidence": []
+      },
+      {
+        "name": "paper_schema_and_author_keywords",
+        "status": "passed",
+        "evidence": {
+          "invalid_rows": []
+        }
+      },
+      {
+        "name": "lsa_all_eligible_ids_assigned",
+        "status": "passed",
+        "evidence": {
+          "eligible": 37662,
+          "assigned": 37662
+        }
+      },
+      {
+        "name": "lsa_actually_completed",
+        "status": "passed",
+        "evidence": {
+          "status": "completed",
+          "corpus_matches": true
+        }
+      },
+      {
+        "name": "lsa_topic_totals_match",
+        "status": "passed",
+        "evidence": {
+          "topic_total": 37662,
+          "input": 37662
+        }
+      },
+      {
+        "name": "lsa_analysis_exists",
+        "status": "passed",
+        "evidence": {
+          "path": "output/analysis/lsa/analysis_manifest.json"
+        }
+      },
+      {
+        "name": "onnx_all_eligible_ids_assigned",
+        "status": "passed",
+        "evidence": {
+          "eligible": 37662,
+          "assigned": 37662
+        }
+      },
+      {
+        "name": "onnx_actually_completed",
+        "status": "passed",
+        "evidence": {
+          "status": "completed",
+          "corpus_matches": true
+        }
+      },
+      {
+        "name": "onnx_topic_totals_match",
+        "status": "passed",
+        "evidence": {
+          "topic_total": 37662,
+          "input": 37662
+        }
+      },
+      {
+        "name": "onnx_analysis_exists",
+        "status": "passed",
+        "evidence": {
+          "path": "output/analysis/onnx/analysis_manifest.json"
+        }
+      },
+      {
+        "name": "both_models_compare_identical_corpus",
+        "status": "passed",
+        "evidence": {
+          "created_at": "2026-10-28T09:00:35.385783+00:00",
+          "lsa_papers": 37662,
+          "onnx_papers": 37662,
+          "intersection_papers": 37662,
+          "lsa_only": 0,
+          "onnx_only": 0,
+          "same_corpus": true,
+          "same_text_fingerprint": true,
+          "ari": 0.2917832177879984,
+          "ami": 0.5000982617351464,
+          "interpretation": "Partition agreement on identical paper IDs. Not topic quality, accuracy, or evidence of optimal K."
+        }
+      },
+      {
+        "name": "only_scale_legal_scores",
+        "status": "passed",
+        "evidence": {
+          "reviews": 0,
+          "invalid": []
+        }
+      },
+      {
+        "name": "no_unproved_conditional_acceptance_rates",
+        "status": "passed",
+        "evidence": {
+          "invalid_rows": []
+        }
+      },
+      {
+        "name": "detail_plan_all_terminal",
+        "status": "passed",
+        "evidence": {
+          "updated_at": "2026-10-28T08:56:28.919335+00:00",
+          "status": "completed",
+          "planned": 5014,
+          "attempted": 5014,
+          "successful": 5014,
+          "failed": 0,
+          "remaining": 0,
+          "main_missing_planned": 1670,
+          "main_repaired": 1670,
+          "main_abstract_repair_rate": 1.0,
+          "directory_new_papers": 3344,
+          "plan_sha256": "e708cfc7b881132ef3252e5935c46b30ce568c34133ff9845667da33d56366cc",
+          "counts_by_reason": {
+            "main_missing_abstract": 1670,
+            "directory_missing_from_bulk": 3344
+          },
+          "failure_note": "Every failed URL retained; terminal attempts do not imply successful coverage. No OpenReview requests made."
+        }
+      },
+      {
+        "name": "report_embedded_exports_exact",
+        "status": "passed",
+        "evidence": {
+          "files": 22,
+          "names": [
+            "processed/papers.csv",
+            "processed/papers.jsonl",
+            "processed/reviews.jsonl",
+            "processed/coverage.csv",
+            "processed/quality.json",
+            "source_coverage.csv",
+            "models/onnx/assignments.csv",
+            "models/onnx/topics.json",
+            "models/onnx/topic_review.csv",
+            "models/onnx/manifest.json",
+            "details/summary.json",
+            "details/reconciliation.csv",
+            "analysis/onnx/decision_samples.csv",
+            "analysis/onnx/heatmap.csv",
+            "analysis/onnx/official_statistics.csv",
+            "analysis/onnx/reconciliation.csv",
+            "analysis/onnx/scores.csv",
+            "analysis/onnx/topic_changes.csv",
+            "analysis/onnx/topic_trends.csv",
+            "analysis/onnx/analysis_manifest.json",
+            "model_comparison/comparison.json",
+            "model_comparison/comparison.csv"
+          ]
+        }
+      },
+      {
+        "name": "report_javascript_syntax",
+        "status": "passed",
+        "evidence": {
+          "exit_code": 0,
+          "stderr": ""
+        }
+      },
+      {
+        "name": "report_has_no_external_resources",
+        "status": "passed",
+        "evidence": {
+          "external_resource_count": 0
+        }
+      }
+    ],
+    "data_status": {
+      "official_bulk": {
+        "ICLR-2024": "success",
+        "ICLR-2025": "success",
+        "ICLR-2026": "success",
+        "ICML-2024": "success",
+        "ICML-2025": "success",
+        "ICML-2026": "success",
+        "NeurIPS-2024": "success",
+        "NeurIPS-2025": "success",
+        "NeurIPS-2026": "success"
+      },
+      "openreview": {
+        "ICLR-2024": "blocked",
+        "ICLR-2025": "blocked",
+        "ICLR-2026": "blocked",
+        "ICML-2024": "blocked",
+        "ICML-2025": "blocked",
+        "ICML-2026": "blocked",
+        "NeurIPS-2024": "blocked",
+        "NeurIPS-2025": "blocked",
+        "NeurIPS-2026": "blocked"
+      },
+      "details": {
+        "updated_at": "2026-10-28T08:56:28.919335+00:00",
+        "status": "completed",
+        "planned": 5014,
+        "attempted": 5014,
+        "successful": 5014,
+        "failed": 0,
+        "remaining": 0,
+        "main_missing_planned": 1670,
+        "main_repaired": 1670,
+        "main_abstract_repair_rate": 1.0,
+        "directory_new_papers": 3344,
+        "plan_sha256": "e708cfc7b881132ef3252e5935c46b30ce568c34133ff9845667da33d56366cc",
+        "counts_by_reason": {
+          "main_missing_abstract": 1670,
+          "directory_missing_from_bulk": 3344
+        },
+        "failure_note": "Every failed URL retained; terminal attempts do not imply successful coverage. No OpenReview requests made."
+      },
+      "main_missing_abstract": 0,
+      "network_completeness": "not_proven; observed lists and explicit track evidence only",
+      "review_analysis": "blocked"
+    },
+    "limits": "Structural checks and successful endpoint traversal do not prove complete submissions, decisions, or official live program coverage."
+  },
+  "finished_at": "2026-10-28T09:02:12.405229+00:00"
+}

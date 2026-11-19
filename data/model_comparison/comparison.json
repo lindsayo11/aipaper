@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-10-28T09:00:35.385783+00:00",
+  "lsa_papers": 37662,
+  "onnx_papers": 37662,
+  "intersection_papers": 37662,
+  "lsa_only": 0,
+  "onnx_only": 0,
+  "same_corpus": true,
+  "same_text_fingerprint": true,
+  "ari": 0.2917832177879984,
+  "ami": 0.5000982617351464,
+  "interpretation": "Partition agreement on identical paper IDs. Not topic quality, accuracy, or evidence of optimal K."
+}

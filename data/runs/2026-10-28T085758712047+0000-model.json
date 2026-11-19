@@ -1,0 +1,109 @@
+{
+  "started_at": "2026-10-28T08:57:58.712063+00:00",
+  "config": {
+    "venues": [
+      "ICLR",
+      "ICML",
+      "NeurIPS"
+    ],
+    "years": [
+      2024,
+      2025,
+      2026
+    ],
+    "http": {
+      "min_interval": 0.35,
+      "timeout": 35,
+      "retries": 2,
+      "workers": 3
+    },
+    "model": {
+      "topics": 50,
+      "seed": 42,
+      "max_features": 60000,
+      "svd_components": 128,
+      "min_df": 4,
+      "outlier_quantile": 0.05
+    },
+    "semantic": {
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "onnx_file": "onnx/model_quint8_avx2.onnx",
+      "tokenizer_file": "tokenizer.json",
+      "batch_size": 32,
+      "max_tokens": 256,
+      "threads": 4
+    },
+    "report": {
+      "max_rows": 5000
+    }
+  },
+  "config_sha256": "32a0dc6f425e4bb739a5560937443b343854e863cf161d4e9d6145945233a20f",
+  "stage": "model",
+  "status": "completed",
+  "result": {
+    "status": "completed",
+    "started_at": "2026-10-28T08:58:03.867911+00:00",
+    "backend": "lsa",
+    "actual_backend": "TFIDF-SVD-L2-MiniBatchKMeans",
+    "optional_backends": {
+      "BERTopic": "not_executed",
+      "HDBSCAN": "not_executed"
+    },
+    "shared_space": true,
+    "text_fields": [
+      "title",
+      "abstract"
+    ],
+    "corpus_filter": {
+      "track": "main",
+      "decision": "accepted",
+      "title": "nonempty",
+      "abstract": "nonempty"
+    },
+    "input_papers": 37662,
+    "processed_input_sha256": "6158c9ec943dc00049f101212fd12c58ced2f6681a539352fa25b5def905c232",
+    "corpus_fingerprint": "8d75b7daecff283f32038a43394c638daf102dd44f455d4727e9dc0a62371a5a",
+    "paper_id_fingerprint": "4f76bd79e1c2cc482df63cc01e5bfabccbfd8a95b10b86589e11e88e7506fb16",
+    "configuration_fingerprint": "ed82268065398e1d26368b686165e5b2c3b64134e9df68ae14971f7ed386cf05",
+    "model_parameters": {
+      "topics": 50,
+      "seed": 42,
+      "max_features": 60000,
+      "svd_components": 128,
+      "min_df": 4,
+      "outlier_quantile": 0.05
+    },
+    "seed": 42,
+    "versions": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "scikit-learn": "1.8.0",
+      "onnxruntime": "1.31.1",
+      "tokenizers": "0.23.3"
+    },
+    "automatic_labels_need_human_review": true,
+    "encoder": "word-and-bigram-TFIDF-SVD-L2",
+    "encoder_fingerprint": "ade034c4993663d2b6d4e8df5361d5d046345f6c25dbd8ffefc5d4a980cd7445",
+    "svd_components": 128,
+    "explained_variance_ratio_sum": 0.09918618947267532,
+    "cache_hits": 0,
+    "cache_misses": 37662,
+    "cache_note": "LSA basis is corpus-dependent and refitted jointly; semantic vectors have incremental text cache",
+    "finished_at": "2026-10-28T08:58:34.883037+00:00",
+    "elapsed_seconds": 31.015,
+    "feature_count": 60000,
+    "embedding_dimension": 128,
+    "topics": 50,
+    "realized_topics": 50,
+    "outlier_rule": "cosine similarity to assigned normalized centroid below corpus quantile; assignments retained",
+    "outlier_threshold": 0.4671770930290222,
+    "outlier_count": 1884,
+    "outlier_fraction": 0.05002389676597101,
+    "silhouette_cosine_sample": 0.12893980741500854,
+    "silhouette_caution": "sampled internal clustering diagnostic, not topic correctness or optimal K",
+    "assignments_sha256": "55413f4f6e27738c9ff8941a647535cc586dca5efb6eaa92f32805a36b4db97b",
+    "vectors_sha256": "b685d05d6c1d299ca988438d048ab6d57ba337078d8133b2eefbb52afc52c0bf"
+  },
+  "finished_at": "2026-10-28T08:58:35.124135+00:00"
+}
