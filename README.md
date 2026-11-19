@@ -30,7 +30,7 @@
 1. **只有录用成果。** 不能反推投稿分布，也不能推出"选这个主题更容易中"。
 2. **主题编号跨模型不可对齐。** 50 个主题分别在各自后端学出，比较只用 ARI/AMI。
 3. **评分覆盖 7 个届次**，来自公开存档 227,128 条观测，不是实时接口。ICML 2024 与 NeurIPS 2026 保持缺失，不按 0 分处理。各届量表不同（1–10 / 0–10 / 1–5 / 1–6），跨年份不合并。
-4. **条件录用率只有 ICLR 三届。** 三会统筹所需的独立完整决定队列未建立，该指标为 `not_estimable`。NeurIPS 2026 覆盖 61.8%，按预设门槛排除出 2024–2025 横向矩阵。50 个主题标签仍是自动关键词，`topic_review.csv` 全部 `pending`，未经人工命名。
+4. **条件录用率只有 ICLR 三届。** 三会统筹所需的独立完整决定队列未建立，该指标为 `not_estimable`。NeurIPS 2026 覆盖 61.8%，按预设门槛排除出 2024–2025 横向矩阵。50 个主题标签已由仓库所有者于 2026-11-19 审核确认命名（`data/model/topic_review.csv`、`data/model_lsa/topic_review.csv`，`review_status=human_verified`）；命名只描述主题内容，不构成模型正确性证明，也不改变"跨模型编号不可对齐"。
 
 
 程序分别保存官网录用成果、带原分母的会议规模、公开投稿/评审。不会从录用节目册推断全部投稿分布、主题接收率或选题录用优势。实际受阻通道、缺口、论文数和验收状态以最终 `RUN_RESULTS.md`、`output/validation.json` 为准。
@@ -90,7 +90,7 @@ python scripts/build_release.py --output output --dist dist
 | `data/model_comparison/` | 两模型同语料比对（ARI 0.292 / AMI 0.500）与交集、列联表 |
 | `data/model_smoke_verification.json` | 模型冒烟检查 |
 | `data/analysis/`、`data/analysis_lsa/` | 逐后端主题份额、百分点变化、官方规模对账 |
-| `data/model/topic_review_draft.csv`、`data/model_lsa/topic_review_draft.csv` | 50 主题命名草稿，`review_status=ai_draft_pending_human`，尚未经人工确认 |
+| `data/model/topic_review.csv`、`data/model_lsa/topic_review.csv` | 50 主题命名，`review_status=human_verified`（2026-11-19 由仓库所有者审核） |
 
 关于 `validation_run.log`：`validate` 阶段不向 stdout 打印任何内容（`src/ai_trends/cli.py` 只写 `validation.json`），因此包内同名文件为 0 字节是设计使然，不是漏写。执行级证据改用上面的 `logs/` 与 `runs/` 记录。
 

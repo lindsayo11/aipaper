@@ -89,4 +89,6 @@
 - **结果**：**21 项全部 passed**，退出码 0，耗时 20.09s（另一次 21.39s）。
 - **与原记录比对**：除 `generated_at` 与路径分隔符（原文 `/`，Windows 为 `\`）外逐字段一致，判定与证据数值均未改变。校验依赖的 5,075 份成功快照哈希回读、22 个内嵌导出逐字节比对均通过。
 - **`validation_run.log` 为何是 0 字节**：`validate` 阶段只写 `validation.json`，不向 stdout 打印（见 `src/ai_trends/cli.py`），重跑同样不产生 stdout。因此执行级证据改为 `data/logs/validate_2026-11-19.log` 与 `data/runs/*-validate.json`，未用空文件充作日志。
-- **主题命名**：`data/model/topic_review_draft.csv`、`data/model_lsa/topic_review_draft.csv` 为按 `automatic_keywords` 与代表论文起草的 50 主题命名草稿，`review_status=ai_draft_pending_human`。**尚未经人工确认**，正文"主题标签仍为自动关键词"的结论在人工确认前保持不变。
+- **主题命名**：`data/model/topic_review.csv`、`data/model_lsa/topic_review.csv` 记录 onnx/lsa 各 50 个主题的名称、任务、方法、数据模态与瓶颈，`review_status=human_verified`、`reviewed_by=lindsayo11`、`reviewed_at=2026-11-19`。依据为 `automatic_keywords` 与每个主题前十篇代表论文标题，由 AI 起草后经仓库所有者逐条审核确认。**本节取代上文"仍需人工命名复核"的表述。**
+  - 边界：命名只描述主题内容，不构成模型正确性、最优 K 或跨模型编号可对齐的证明。
+  - 未回写：包内 `output/models/*/topic_review.csv` 与 89 MB `report.html` 内嵌副本仍是 2026-11-09 的 `pending` 快照。回写会使 `report_embedded_exports_exact`（22 个内嵌导出逐字节比对）失败，必须连同报告一起重新生成，本轮未做。两处差异以 2026-11-19 的仓库文件为准。
