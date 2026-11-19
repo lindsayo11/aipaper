@@ -1,0 +1,17 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "lxml": "6.1.1",
+    "matplotlib": "3.10.8",
+    "pandas": "2.2.3",
+    "setuptools": "84.1.0",
+    "aiohttp": "3.14.4"
+  },
+  "new_dependencies_location": "project-isolated .deps; see requirements.lock.txt",
+  "semantic_telemetry_policy": "ORT_DISABLE_TELEMETRY=1 before import plus API disable; run in fresh process",
+  "cpu_available": 9
+}

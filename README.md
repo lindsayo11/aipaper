@@ -89,6 +89,10 @@ python scripts/build_release.py --output output --dist dist
 | `data/model_lsa/` | lsa 后端同一批论文的 manifest、topics.json、assignments.csv |
 | `data/model_comparison/` | 两模型同语料比对（ARI 0.292 / AMI 0.500）与交集、列联表 |
 | `data/model_smoke_verification.json` | 模型冒烟检查 |
+| `data/source_coverage.csv`、`data/source_coverage.json` | 9 届来源状态与覆盖，对应校验项 `nine_explicit_source_states` |
+| `data/details/reconciliation.csv` | 逐届详情计划与实采对账（5,014/5,014） |
+| `data/collection_scope.json`、`data/environment_snapshot.json` | 采集口径绑定与环境快照 |
+| `data/model_assets/` | MiniLM 固定 revision 的下载地址与 SHA256 元数据（不含权重） |
 | `data/analysis/`、`data/analysis_lsa/` | 逐后端主题份额、百分点变化、官方规模对账 |
 | `data/model/topic_review.csv`、`data/model_lsa/topic_review.csv` | 50 主题命名，`review_status=human_verified`（2026-11-19 由仓库所有者审核） |
 

@@ -1,0 +1,22 @@
+{
+  "sha256": "e4771b7c873c4f51516e4f436fc9b43f723413b3c95847f1e5f56886b42779f4",
+  "config": {
+    "venues": [
+      "ICLR",
+      "ICML",
+      "NeurIPS"
+    ],
+    "years": [
+      2024,
+      2025,
+      2026
+    ],
+    "http": {
+      "min_interval": 0.35,
+      "timeout": 35,
+      "retries": 2,
+      "workers": 3
+    }
+  },
+  "created_at": "2026-10-28T08:00:22.871317+00:00"
+}
