@@ -1,0 +1,10 @@
+﻿venue,year,model_papers,scored_papers_ledger,scored_papers_strict_id,net_difference,review_observations,original_review_ids,papers_without_scores,score_coverage_percent,scale_min,scale_max,score_fields
+ICLR,2024,2260,2260,2260,0,8742,8742,0,100.000000,1,10,rating:2260
+ICLR,2025,3708,3697,3596,101,14911,14911,11,99.703344,1,10,rating:3697
+ICLR,2026,5353,5352,5353,-1,20906,20906,1,99.981319,0,10,rating:5352
+ICML,2024,2535,0,0,0,0,0,2535,0.000000,,,
+ICML,2025,3258,3252,3258,-6,12459,12459,6,99.815838,1,5,recommendation:3252
+ICML,2026,6341,6302,6341,-39,24227,0,39,99.384955,1,6,recommendation:6302
+NeurIPS,2024,4035,4034,4035,-1,15852,0,1,99.975217,1,10,rating:4034
+NeurIPS,2025,5287,5237,5232,5,21147,0,50,99.054284,1,6,rating:5237
+NeurIPS,2026,4885,0,0,0,0,0,4885,0.000000,,,

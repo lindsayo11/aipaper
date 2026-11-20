@@ -93,3 +93,42 @@
   - 边界：命名只描述主题内容，不构成模型正确性、最优 K 或跨模型编号可对齐的证明。
   - 未回写：包内 `output/models/*/topic_review.csv` 与 89 MB `report.html` 内嵌副本仍是 2026-11-09 的 `pending` 快照。回写会使 `report_embedded_exports_exact`（22 个内嵌导出逐字节比对）失败，必须连同报告一起重新生成，本轮未做。两处差异以 2026-11-19 的仓库文件为准。
 - **完整数据包已发布**：`data_and_results.zip`（537,695,500 B，SHA256 `69d86edeec4862727fea5b140a8d591ea4598d9c2c19767b83914a5f8e186420`）作为 Release 附件发布，标签 [`data-2026-11-19`](https://github.com/lindsayo11/aipaper/releases/tag/data-2026-11-19)。上文"仅在本机留存"的表述自本条起不再适用；GitHub 记录的 asset digest 与本机 SHA256 一致，直链可下载（Content-Length 537,695,500）。
+
+---
+
+## 补充：评分逐条账本与差额 59 对账（2026-11-20）
+
+- **问题**：主题评分表 350 行的样本计数合计 30,134，`analysis_manifest.json` 原记录 30,075，相差 59 篇，且包内没有逐条评分资料可核。
+- **结论**：差额不是漏采或重复，是两种连接口径的净差。恒等式：
+
+  `30,134（账本）= 30,075（严格 paper_id 直连）+ 162（按 OpenReview ID 归一匹配）− 103（标题冲突隔离或未形成评分）`
+
+- **+162**：模型侧 `paper_id` 是来源页哈希（如 `ICLR-2025-src-0c4cfb…`），评审档案按 `venue-year-or-<OpenReview ID>` 记录；标题归一 + OpenReview ID 对齐后才连上，严格 ID 直连会漏计。ICLR 2025 109 篇、NeurIPS 2025 53 篇。
+- **−103**：评审观测存在但标题与档案不一致被隔离（ICLR2025 8、ICLR2026 1、ICML2025 6、ICML2026 39、NeurIPS2024 1、NeurIPS2025 48），或匹配后无可用评分，未计入评分表。
+- **逐条账本**：`public_review_scores_and_evidence.zip` 新增 `score_ledger/paper_scores.csv`（30,134 行；每行 `observation_ids`／`review_ids`／`ratings` 三个等长列表按位置对齐）、`score_ledger/venue_year_summary.csv`、`score_ledger/README.md`；`reconciliation/` 放 162／103 两侧逐条清单、`count_definitions.csv`、`gap59_summary.json` 与 `verify.py`。
+- **复算**：`python scripts/verify_score_ledger.py --detail` → 9 项检查全部 PASS。350 个主题的计数与均值逐行等于 `data/analysis/scores.csv`（0 不一致）；逐条评分均值 0 例偏差；量表 0 例越界；`observation_ids` 数量与 `n_reviews` 全量一致。
+- **63,391 条观测没有原始评审 ID**：来自公开规范化镜像（`not_preserved_by_normalized_mirror`），账本改用 `observation_id` 定位，评分值不受影响；`n_original_review_ids` 逐篇给出保留原始 ID 的条数。
+- **口径澄清**：`supplemental_inputs.scored_model_papers` 记的是严格 ID 口径（30,075），评分表实际使用的是 30,134。两个数都保留，定义写在同一 JSON 的 `scored_model_papers_scope` 与 `scored_model_papers_used_in_scores_table`，不互相覆盖。
+- **发布**：附件 `scores-2026-11-20`（26,194,296 B，SHA256 `80d19e9a1f45ad5aa93724fb9dbcc1406e3541412e7ba1ea01ca68cb0b353874`）。仓库侧 `data/scores/` 只放差额清单与结论，账本本体随附件分发。
+
+---
+
+## 补充：8 组结果表与 4 张图入库（2026-11-20）
+
+补充轮交付的 8 组结果表与 4 张图此前只在交付件里，仓库没有对应文件。本轮原样导出并把可复算的部分全部逐格核对：
+
+| 表 | 行数 | 复算 |
+| --- | ---: | --- |
+| `data/supplement/tables/sample_scale.csv` | 9 | 一致 |
+| `field_completeness.csv` | 10 | 一致 |
+| `abstract_length.csv` | 9 | 口径不同（样本数一致，词数高 1.34–2.44 词/篇） |
+| `topic_change_common_years.csv` | 50 | 一致（含 2024→2025 占比变化逐值） |
+| `topic_venue_difference.csv` | 50 | 一致 |
+| `topic_year_detail.csv` | 450 | 一致 |
+| `score_coverage.csv` | 7 | 一致（对齐 `data/scores/`） |
+| `iclr_public_submission_rates.csv` | 150 | 一致（对齐 `iclr_topic_rates_results.zip`） |
+
+- **图**：`reports/figures/` 四张（年度样本规模、摘要长度分布、三会合并主题变化、2025 会议差异），取自交付件内嵌原图。
+- **关键值复核**：思维链推理 2024→2025 由 123 篇增至 339 篇、占比 1.39%→2.77%，变化 **+1.37 pp**；图神经网络与图表示 364→423 篇、占比 4.12%→3.45%（篇数增、份额降）；3D 高斯泼溅重建 2025 年在 NeurIPS/ICLR/ICML 为 2.53%/2.35%/0.40%。
+- **唯一不能逐位重算的表**：摘要长度。交付表的分词实现未随项目保留，空白分词复算的偏差随连字符/斜杠密度变化（不是常数），故按交付口径保留、不改写，差异记在 `data/supplement/verification.json`。
+- **再生成**：`python scripts/export_supplement_tables.py --xlsx <交付件>`；只复算加 `--verify-only`。

@@ -1,0 +1,7 @@
+﻿count_name,value,population,definition,where_recomputed
+ledger_total,30134,7 个有公开评分的届次（ICML2024、NeurIPS2026 无公开评分）,主题评分表实际使用的论文数：join_status=matched_with_scores 且标题/档案 ID 归一匹配成功,score_ledger/paper_scores.csv 行数；data/analysis/scores.csv 的 papers_with_reviews 之和
+strict_paper_id_total,30075,同上,模型论文 paper_id 与评审档案 paper_id 完全同名的那部分（不含归一匹配）,与 previous_scores/reviews.csv 的 paper_id 取交集
+legacy_manifest_total,30075,同上,analysis_manifest.json 旧字段 supplemental_inputs.scored_model_papers 记录的数值，等于严格 ID 直连口径,= strict_paper_id_total
+plus_openreview_id_matches,162,同上,模型侧 paper_id 为来源页哈希、档案侧按 OpenReview ID 记录，按标题归一 + OpenReview ID 对齐后才匹配上的论文,reconciliation/gap59_added_alternate_id.csv 行数
+minus_quarantined_or_unscored,103,同上,评审观测存在但标题冲突被隔离、或匹配后无可用评分的论文，未计入评分表,reconciliation/gap59_removed_quarantined.csv 行数
+difference,59,同上,评分表合计与原统计的差额 = added − removed,reconciliation/gap59_summary.json 的 identity

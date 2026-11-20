@@ -1,0 +1,249 @@
+{
+  "exported_at": "2026-11-20T01:30:43+00:00",
+  "source": {
+    "path": "C:\\Users\\linds\\Downloads\\项目数据分析补充结果.xlsx",
+    "sha256": "52907d69e3339f9d7aaadb653aea1120c2304b6a7e58d6d04b48fe665715d002",
+    "bytes": 292428
+  },
+  "tables": [
+    {
+      "file": "data/supplement/tables/sample_scale.csv",
+      "rows": 9,
+      "columns": 7,
+      "sha256": "3b06ff6096469a2d76112cda0b32b4ef2f5406fd2c831a8c20996f730296391c",
+      "bytes": 559
+    },
+    {
+      "file": "data/supplement/tables/field_completeness.csv",
+      "rows": 10,
+      "columns": 5,
+      "sha256": "b5195502c22cff89289e30217e7aaad30c429a32ee85c709f7ed0c7ce7e77288",
+      "bytes": 548
+    },
+    {
+      "file": "data/supplement/tables/abstract_length.csv",
+      "rows": 9,
+      "columns": 8,
+      "sha256": "4d7a30baef609d1eaae2cbeea9fef5863e1b37a44de3465f2abf972bee8c7988",
+      "bytes": 594
+    },
+    {
+      "file": "data/supplement/tables/topic_change_common_years.csv",
+      "rows": 50,
+      "columns": 13,
+      "sha256": "aad6ff0d9bafbadbdb88fa791e2745d20f84d7ce56551c03a3b87b9e4900ff17",
+      "bytes": 8234
+    },
+    {
+      "file": "data/supplement/tables/topic_venue_difference.csv",
+      "rows": 50,
+      "columns": 10,
+      "sha256": "5cbeb50775e802a77a45767028bd8b114b75d4de33511960fa6f2d4bbddba1bd",
+      "bytes": 6459
+    },
+    {
+      "file": "data/supplement/tables/topic_year_detail.csv",
+      "rows": 450,
+      "columns": 7,
+      "sha256": "1766d8bf42082a8428d91191310f7ea3a0fdf92a059fa0218c97ef9927c32506",
+      "bytes": 31476
+    },
+    {
+      "file": "data/supplement/tables/score_coverage.csv",
+      "rows": 7,
+      "columns": 7,
+      "sha256": "b1c3bcd3161a5bac7dd0941c49b75da8d909695036528fc82cd5d19359d4f11e",
+      "bytes": 427
+    },
+    {
+      "file": "data/supplement/tables/iclr_public_submission_rates.csv",
+      "rows": 150,
+      "columns": 14,
+      "sha256": "ca778a5863103b40ae9f79454a480b77d8dc501e06ef44fba6121c21aa923af6",
+      "bytes": 20673
+    }
+  ],
+  "figures": [
+    {
+      "file": "reports/figures/fig1_venue_year_sample.png",
+      "bytes": 45164,
+      "sha256": "47d3ef144ff80d933023f1b2c66cd1183e91d742c0fa41998a7dc0bdb563f159"
+    },
+    {
+      "file": "reports/figures/fig2_abstract_length_distribution.png",
+      "bytes": 45306,
+      "sha256": "5ddddf2964eb0a4c0dea592dbeef6870f0c3227d5470a9ce6e6da10e718b8c55"
+    },
+    {
+      "file": "reports/figures/fig3_topic_share_change_2024_2025.png",
+      "bytes": 102017,
+      "sha256": "7a87230afaecb3dd5c027c4fb190d5ebe27113f5e8f6edb819d84b25f76908bd"
+    },
+    {
+      "file": "reports/figures/fig4_topic_venue_difference_2025.png",
+      "bytes": 85607,
+      "sha256": "963e698f3eb03123676cc0be47da81f9d75f07e7f2c3d79553605844fac1a1db"
+    }
+  ],
+  "verification": {
+    "数据规模": {
+      "cells_checked": 27,
+      "mismatches": 0,
+      "examples": [],
+      "status": "matched"
+    },
+    "字段完整性": {
+      "cells_checked": 20,
+      "mismatches": 0,
+      "examples": [],
+      "status": "matched"
+    },
+    "摘要长度": {
+      "cells_checked": 54,
+      "mismatches": 45,
+      "examples": [
+        {
+          "key": "('ICLR', '2024')",
+          "column": "均值",
+          "table": 187.20929203539822,
+          "recomputed": 185.2079646017699,
+          "delta": 2.001327433628319
+        },
+        {
+          "key": "('ICLR', '2024')",
+          "column": "中位数",
+          "table": 184.0,
+          "recomputed": 182.0,
+          "delta": 2.0
+        },
+        {
+          "key": "('ICLR', '2024')",
+          "column": "下四分位",
+          "table": 159.0,
+          "recomputed": 157.0,
+          "delta": 2.0
+        },
+        {
+          "key": "('ICLR', '2024')",
+          "column": "上四分位",
+          "table": 212.0,
+          "recomputed": 210.0,
+          "delta": 2.0
+        },
+        {
+          "key": "('ICLR', '2024')",
+          "column": "P95",
+          "table": 261.0,
+          "recomputed": 260.0,
+          "delta": 1.0
+        },
+        {
+          "key": "('ICLR', '2025')",
+          "column": "均值",
+          "table": 190.903451995685,
+          "recomputed": 188.792071197411,
+          "delta": 2.1113807982740127
+        },
+        {
+          "key": "('ICLR', '2025')",
+          "column": "中位数",
+          "table": 188.0,
+          "recomputed": 186.0,
+          "delta": 2.0
+        },
+        {
+          "key": "('ICLR', '2025')",
+          "column": "下四分位",
+          "table": 162.0,
+          "recomputed": 161.0,
+          "delta": 1.0
+        },
+        {
+          "key": "('ICLR', '2025')",
+          "column": "上四分位",
+          "table": 216.0,
+          "recomputed": 214.0,
+          "delta": 2.0
+        },
+        {
+          "key": "('ICLR', '2025')",
+          "column": "P95",
+          "table": 267.0,
+          "recomputed": 262.64999999999964,
+          "delta": 4.350000000000364
+        },
+        {
+          "key": "('ICLR', '2026')",
+          "column": "均值",
+          "table": 188.9850551092845,
+          "recomputed": 187.30431533719408,
+          "delta": 1.6807397720904191
+        },
+        {
+          "key": "('ICLR', '2026')",
+          "column": "中位数",
+          "table": 186.0,
+          "recomputed": 185,
+          "delta": 1.0
+        },
+        {
+          "key": "('ICLR', '2026')",
+          "column": "下四分位",
+          "table": 162.0,
+          "recomputed": 161.0,
+          "delta": 1.0
+        },
+        {
+          "key": "('ICLR', '2026')",
+          "column": "上四分位",
+          "table": 214.0,
+          "recomputed": 212.0,
+          "delta": 2.0
+        },
+        {
+          "key": "('ICLR', '2026')",
+          "column": "P95",
+          "table": 254.0,
+          "recomputed": 253.0,
+          "delta": 1.0
+        }
+      ],
+      "status": "definition_difference",
+      "mean_word_count_delta": {
+        "min": 1.3443,
+        "max": 2.4401
+      },
+      "note": "样本数逐届一致；摘要英文词数均值比仓库空白分词口径高 1.34～2.44 词（不是常数偏移，属分词实现不同）。交付表的分词实现未随项目保留，故不复算、也不改写表内数值；其余 7 张表已逐格复算一致。"
+    },
+    "共同年份变化": {
+      "cells_checked": 250,
+      "mismatches": 0,
+      "examples": [],
+      "status": "matched"
+    },
+    "会议主题差异": {
+      "cells_checked": 200,
+      "mismatches": 0,
+      "examples": [],
+      "status": "matched"
+    },
+    "主题年度明细": {
+      "cells_checked": 900,
+      "mismatches": 0,
+      "examples": [],
+      "status": "matched"
+    },
+    "评分覆盖": {
+      "cells_checked": 28,
+      "mismatches": 0,
+      "examples": [],
+      "status": "matched"
+    },
+    "ICLR公开投稿": {
+      "cells_checked": 900,
+      "mismatches": 0,
+      "examples": [],
+      "status": "matched"
+    }
+  }
+}

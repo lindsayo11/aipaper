@@ -29,7 +29,7 @@
 
 1. **只有录用成果。** 不能反推投稿分布，也不能推出"选这个主题更容易中"。
 2. **主题编号跨模型不可对齐。** 50 个主题分别在各自后端学出，比较只用 ARI/AMI。
-3. **评分覆盖 7 个届次**，来自公开存档 227,128 条观测，不是实时接口。ICML 2024 与 NeurIPS 2026 保持缺失，不按 0 分处理。各届量表不同（1–10 / 0–10 / 1–5 / 1–6），跨年份不合并。
+3. **评分覆盖 7 个届次**，来自公开存档 227,128 条观测，不是实时接口。ICML 2024 与 NeurIPS 2026 保持缺失，不按 0 分处理。各届量表不同（1–10 / 0–10 / 1–5 / 1–6），跨年份不合并。评分逐条账本见 `data/scores/`：主题评分表合计 30,134 篇＝严格 ID 直连 30,075 + 归一匹配 162 − 隔离未计 103（`score_reconciliation.json`）。
 4. **条件录用率只有 ICLR 三届。** 三会统筹所需的独立完整决定队列未建立，该指标为 `not_estimable`。NeurIPS 2026 覆盖 61.8%，按预设门槛排除出 2024–2025 横向矩阵。50 个主题标签已由仓库所有者于 2026-11-19 审核确认命名（`data/model/topic_review.csv`、`data/model_lsa/topic_review.csv`，`review_status=human_verified`）；命名只描述主题内容，不构成模型正确性证明，也不改变"跨模型编号不可对齐"。
 
 
@@ -95,10 +95,16 @@ python scripts/build_release.py --output output --dist dist
 | `data/model_assets/` | MiniLM 固定 revision 的下载地址与 SHA256 元数据（不含权重） |
 | `data/analysis/`、`data/analysis_lsa/` | 逐后端主题份额、百分点变化、官方规模对账 |
 | `data/model/topic_review.csv`、`data/model_lsa/topic_review.csv` | 50 主题命名，`review_status=human_verified`（2026-11-19 由仓库所有者审核） |
+| `data/scores/score_reconciliation.json` | 评分表合计 30,134 与原统计 30,075 的逐条差额对账（30,134 = 30,075 + 162 − 103）与证据包 SHA256 |
+| `data/scores/score_counts_by_venue_year.csv` | 逐届模型论文数、账本数、严格 ID 直连数、净差、观测数、量表 |
+| `data/scores/gap59_added_alternate_id.csv`、`gap59_removed_quarantined.csv` | 差额两侧的逐条清单：+162 按 OpenReview ID 归一匹配、−103 标题冲突隔离或未评分 |
+| `data/supplement/tables/`、`reports/figures/` | 补充轮 8 组结果表与 4 张图：数据规模、字段完整性、摘要长度、共同年份变化、会议差异、主题年度明细、评分覆盖、ICLR 公开投稿；逐格复算见 `data/supplement/README.md` |
 
 关于 `validation_run.log`：`validate` 阶段不向 stdout 打印任何内容（`src/ai_trends/cli.py` 只写 `validation.json`），因此包内同名文件为 0 字节是设计使然，不是漏写。执行级证据改用上面的 `logs/` 与 `runs/` 记录。
 
 2026-11-19 离线重跑结果：21 项全部 passed，退出码 0，耗时 20.09s；除 `generated_at` 与路径分隔符外，与原记录逐字段一致。原始 HTTP 快照、清洗前后语料、稠密向量合计约 513 MB，超出 GitHub 单文件上限，改以 Release 附件发布：[`data-2026-11-19`](https://github.com/lindsayo11/aipaper/releases/tag/data-2026-11-19)（537,695,500 B，SHA256 `69d86edeec4862727fea5b140a8d591ea4598d9c2c19767b83914a5f8e186420`，与 GitHub 记录的 asset digest 一致）。还原方式见 `docs/REPRODUCE.md`。
+
+评分证据包 `public_review_scores_and_evidence.zip` 同名附件发布在 [`scores-2026-11-20`](https://github.com/lindsayo11/aipaper/releases/tag/scores-2026-11-20)（26,194,296 B）。包内 `score_ledger/paper_scores.csv` 是 30,134 篇论文的逐条评分账本（`observation_ids`／`review_ids`／`ratings` 三个等长列表按位置对齐）；`reconciliation/` 给出 30,134 = 30,075 + 162 − 103 的两侧逐条清单与 `verify.py`，解压后 `python reconciliation/verify.py` 即可复算。仓库侧只放差额清单与结论（`data/scores/`），账本本体随附件分发。
 
 ## 已知边界
 

@@ -1,2 +1,10 @@
 reports/report.html filter=lfs diff=lfs merge=lfs -text
 packages/*.zip filter=lfs diff=lfs merge=lfs -text
+
+# 数据文件的 SHA256 在 manifest 中登记，禁止换行转换
+data/scores/** -text
+data/supplement/** -text
+data/analysis/** -text
+data/model/** -text
+data/model_lsa/** -text
+reports/figures/** -text

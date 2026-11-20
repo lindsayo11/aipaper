@@ -127,6 +127,9 @@
   "stage": "latest_public_archive_snapshot_not_initial",
   "review_observations": 227128,
   "scored_model_papers": 30075,
+  "scored_model_papers_scope": "strict_paper_id：模型 paper_id 与公开评审档案 paper_id 同名，不含按 OpenReview ID 归一匹配的 162 篇",
+  "scored_model_papers_used_in_scores_table": 30134,
+  "scored_model_papers_gap_note": "30134 = 30075 + 162 − 103：+162 为标题归一 + OpenReview ID 对齐后匹配上的论文，−103 为标题冲突被隔离或未形成可用评分的论文；逐条见 data/scores/score_reconciliation.json，账本见证据包内 score_ledger/paper_scores.csv",
   "reviews_csv_sha256": "db1e8c2554c4a6fb719b398e7818bd8e1005b0cac9fabf5dc80c182d3e1de69d",
   "topic_scores_50_sha256": "aa97d4c387471f1fc62a359f6cc3f679dcd94079691d1ade5364bcd82d59e97d",
   "covered_venue_years": [
