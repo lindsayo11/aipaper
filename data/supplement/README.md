@@ -1,6 +1,8 @@
 # 补充轮结果表与图
 
-8 组结果表和 4 张图，取自补充轮交付件 `项目数据分析补充结果.xlsx`（292,428 B，SHA256 `52907d69…`），原样导出、数值不改写。导出与复算脚本：`scripts/export_supplement_tables.py`。
+8 组结果表和 4 张图，取自补充轮交付件 `项目数据分析补充结果.xlsx`（292,428 B，SHA256 `52907d69e3339f9d7aaadb653aea1120c2304b6a7e58d6d04b48fe665715d002`），原样导出、数值不改写。导出与复算脚本：`scripts/export_supplement_tables.py`。
+
+交付原件以 ASCII 文件名 `supplement_results_2026-11-20.xlsx` 挂在 Release [`scores-2026-11-20`](https://github.com/lindsayo11/aipaper/releases/tag/scores-2026-11-20)，内容与交付时逐字节一致，可用同一 SHA256 核对；仓库内不重复存二进制。
 
 ## 表
 
