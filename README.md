@@ -4,15 +4,29 @@
 
 ## 结论
 
-**强化学习 + 推理（RL / reasoning / reinforcement / reward）是这两年三会增长最快的方向。** 同届同主题按论文等权，单位为百分点：
+**"增长最快"有两个口径，年份和比较范围都不同，不能合成一句"近两年增长最快"。**
 
-| 会议 | 变化 | 论文数 |
+**① 各会议最近两届（同会内比较，单位为百分点）：RLVR 与推理强化学习 三个会都居首。**
+
+| 会议 | 比较年份 | 变化 | 论文数 |
+|---|---|---:|---|
+| ICLR | 2025→2026 | **+3.75 pp** | 32 → 247 |
+| ICML | 2025→2026 | **+2.24 pp** | 36 → 212 |
+| NeurIPS | 2024→2025 | **+1.92 pp** | 17 → 124 |
+
+**② 三会合并、共同年份 2024→2025（8,830 → 12,253 篇）：思维链推理 居首，+1.37 pp（123 → 339 篇，占比 1.39% → 2.77%）。**
+
+| 主题 | 占比变化 | 篇数变化 |
 |---|---:|---|
-| ICLR 2025→2026 | **+3.75 pp** | 32 → 247 |
-| ICML 2025→2026 | **+2.24 pp** | 36 → 212 |
-| NeurIPS 2024→2025 | **+1.92 pp** | 17 → 124 |
+| 思维链推理 | **+1.37 pp** | 123 → 339 |
+| 参数高效微调 | +1.11 pp | 192 → 402 |
+| RLVR 与推理强化学习 | +0.91 pp | 58 → 192 |
 
-同向增长：多模态推理（ICLR +2.60 pp）、LLM Agent（ICML +2.01 pp）。反向：图神经网络（ICLR −1.37 pp、ICML −1.99 pp）、传统神经网络理论。
+去掉模型标记的低相似度论文（1,884 篇，约 5%）重算，前三位与顺序不变：+1.39 / +1.17 / +0.95 pp；第 4、5 名互换。口径见 `data/supplement/tables/topic_change_stability.csv`。
+
+同向增长：多模态推理（ICLR +2.60 pp）、LLM Agent（ICML +2.01 pp）。反向：图神经网络（ICLR −1.37 pp、ICML −1.99 pp；三会合并口径下 364 → 423 篇但占比 4.12% → 3.45%）、传统神经网络理论。
+
+主题份额与评分几乎无关：ICLR 2025 的 50 个主题里，份额与平均评分的 Spearman ρ = −0.10，六个重点主题均分都在 6.32–6.57（全会均值 6.46，论文级标准差 0.67）。**论文多不等于分数高，增长快也不是因为分数更高或更分散**（`data/supplement/tables/topic_score_distribution.csv`、`reports/figures/fig5_score_distribution_iclr2025.png`）。
 
 两个独立模型在同一批 37,662 篇上给出同向结果：ARI 0.292、AMI 0.500。**这只说明两个模型的分区有中等程度一致，不代表主题质量或正确率。**
 
@@ -98,7 +112,7 @@ python scripts/build_release.py --output output --dist dist
 | `data/scores/score_reconciliation.json` | 评分表合计 30,134 与原统计 30,075 的逐条差额对账（30,134 = 30,075 + 162 − 103）与证据包 SHA256 |
 | `data/scores/score_counts_by_venue_year.csv` | 逐届模型论文数、账本数、严格 ID 直连数、净差、观测数、量表 |
 | `data/scores/gap59_added_alternate_id.csv`、`gap59_removed_quarantined.csv` | 差额两侧的逐条清单：+162 按 OpenReview ID 归一匹配、−103 标题冲突隔离或未评分 |
-| `data/supplement/tables/`、`reports/figures/` | 补充轮 8 组结果表与 4 张图：数据规模、字段完整性、摘要长度、共同年份变化、会议差异、主题年度明细、评分覆盖、ICLR 公开投稿；逐格复算见 `data/supplement/README.md` |
+| `data/supplement/tables/`、`reports/figures/` | 补充轮 10 张结果表 + 5 张图：数据规模、字段完整性、摘要长度、共同年份变化、会议差异、主题年度明细、评分覆盖、ICLR 公开投稿、主题变化稳健性、评分分布；逐格复算与口径说明见 `data/supplement/README.md` |
 
 关于 `validation_run.log`：`validate` 阶段不向 stdout 打印任何内容（`src/ai_trends/cli.py` 只写 `validation.json`），因此包内同名文件为 0 字节是设计使然，不是漏写。执行级证据改用上面的 `logs/` 与 `runs/` 记录。
 

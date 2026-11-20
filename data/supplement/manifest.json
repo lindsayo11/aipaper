@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-11-20T01:30:43+00:00",
+  "exported_at": "2026-11-20T02:11:04+00:00",
   "source": {
     "path": "C:\\Users\\linds\\Downloads\\项目数据分析补充结果.xlsx",
     "sha256": "52907d69e3339f9d7aaadb653aea1120c2304b6a7e58d6d04b48fe665715d002",
@@ -19,13 +19,6 @@
       "columns": 5,
       "sha256": "b5195502c22cff89289e30217e7aaad30c429a32ee85c709f7ed0c7ce7e77288",
       "bytes": 548
-    },
-    {
-      "file": "data/supplement/tables/abstract_length.csv",
-      "rows": 9,
-      "columns": 8,
-      "sha256": "4d7a30baef609d1eaae2cbeea9fef5863e1b37a44de3465f2abf972bee8c7988",
-      "bytes": 594
     },
     {
       "file": "data/supplement/tables/topic_change_common_years.csv",
@@ -70,11 +63,6 @@
       "sha256": "47d3ef144ff80d933023f1b2c66cd1183e91d742c0fa41998a7dc0bdb563f159"
     },
     {
-      "file": "reports/figures/fig2_abstract_length_distribution.png",
-      "bytes": 45306,
-      "sha256": "5ddddf2964eb0a4c0dea592dbeef6870f0c3227d5470a9ce6e6da10e718b8c55"
-    },
-    {
       "file": "reports/figures/fig3_topic_share_change_2024_2025.png",
       "bytes": 102017,
       "sha256": "7a87230afaecb3dd5c027c4fb190d5ebe27113f5e8f6edb819d84b25f76908bd"
@@ -97,123 +85,6 @@
       "mismatches": 0,
       "examples": [],
       "status": "matched"
-    },
-    "摘要长度": {
-      "cells_checked": 54,
-      "mismatches": 45,
-      "examples": [
-        {
-          "key": "('ICLR', '2024')",
-          "column": "均值",
-          "table": 187.20929203539822,
-          "recomputed": 185.2079646017699,
-          "delta": 2.001327433628319
-        },
-        {
-          "key": "('ICLR', '2024')",
-          "column": "中位数",
-          "table": 184.0,
-          "recomputed": 182.0,
-          "delta": 2.0
-        },
-        {
-          "key": "('ICLR', '2024')",
-          "column": "下四分位",
-          "table": 159.0,
-          "recomputed": 157.0,
-          "delta": 2.0
-        },
-        {
-          "key": "('ICLR', '2024')",
-          "column": "上四分位",
-          "table": 212.0,
-          "recomputed": 210.0,
-          "delta": 2.0
-        },
-        {
-          "key": "('ICLR', '2024')",
-          "column": "P95",
-          "table": 261.0,
-          "recomputed": 260.0,
-          "delta": 1.0
-        },
-        {
-          "key": "('ICLR', '2025')",
-          "column": "均值",
-          "table": 190.903451995685,
-          "recomputed": 188.792071197411,
-          "delta": 2.1113807982740127
-        },
-        {
-          "key": "('ICLR', '2025')",
-          "column": "中位数",
-          "table": 188.0,
-          "recomputed": 186.0,
-          "delta": 2.0
-        },
-        {
-          "key": "('ICLR', '2025')",
-          "column": "下四分位",
-          "table": 162.0,
-          "recomputed": 161.0,
-          "delta": 1.0
-        },
-        {
-          "key": "('ICLR', '2025')",
-          "column": "上四分位",
-          "table": 216.0,
-          "recomputed": 214.0,
-          "delta": 2.0
-        },
-        {
-          "key": "('ICLR', '2025')",
-          "column": "P95",
-          "table": 267.0,
-          "recomputed": 262.64999999999964,
-          "delta": 4.350000000000364
-        },
-        {
-          "key": "('ICLR', '2026')",
-          "column": "均值",
-          "table": 188.9850551092845,
-          "recomputed": 187.30431533719408,
-          "delta": 1.6807397720904191
-        },
-        {
-          "key": "('ICLR', '2026')",
-          "column": "中位数",
-          "table": 186.0,
-          "recomputed": 185,
-          "delta": 1.0
-        },
-        {
-          "key": "('ICLR', '2026')",
-          "column": "下四分位",
-          "table": 162.0,
-          "recomputed": 161.0,
-          "delta": 1.0
-        },
-        {
-          "key": "('ICLR', '2026')",
-          "column": "上四分位",
-          "table": 214.0,
-          "recomputed": 212.0,
-          "delta": 2.0
-        },
-        {
-          "key": "('ICLR', '2026')",
-          "column": "P95",
-          "table": 254.0,
-          "recomputed": 253.0,
-          "delta": 1.0
-        }
-      ],
-      "status": "definition_difference",
-      "mean_word_count_delta": {
-        "min": 1.3443,
-        "max": 2.4401
-      },
-      "note": "样本数逐届一致；摘要英文词数均值比仓库空白分词口径高 1.34～2.44 词（不是常数偏移，属分词实现不同）。交付表的分词实现未随项目保留，故不复算、也不改写表内数值；其余 7 张表已逐格复算一致。"
     },
     "共同年份变化": {
       "cells_checked": 250,

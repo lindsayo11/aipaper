@@ -1,0 +1,220 @@
+{
+  "generated_at": "2026-11-20T02:12:22+00:00",
+  "abstract_length": {
+    "method": "英文词数 = 摘要按空白切分后的 token 数（len(text.split())）",
+    "note": "取代交付表的正则口径：ICLR2024 均值由 187.21 降至 185.21；全体中位数 177（原图 179）",
+    "overall": {
+      "venue": "全部",
+      "year": "三届合并",
+      "n": 37662,
+      "mean": 179.36179703680102,
+      "median": 177.0,
+      "q1": 153.0,
+      "q3": 202.0,
+      "p95": 247.0
+    },
+    "by_venue_year": [
+      {
+        "venue": "ICLR",
+        "year": "2024",
+        "n": 2260,
+        "mean": 185.2079646017699,
+        "median": 182.0,
+        "q1": 157.0,
+        "q3": 210.0,
+        "p95": 260.0
+      },
+      {
+        "venue": "ICLR",
+        "year": "2025",
+        "n": 3708,
+        "mean": 188.792071197411,
+        "median": 186.0,
+        "q1": 161.0,
+        "q3": 214.0,
+        "p95": 262.64999999999964
+      },
+      {
+        "venue": "ICLR",
+        "year": "2026",
+        "n": 5353,
+        "mean": 187.30431533719408,
+        "median": 185.0,
+        "q1": 161.0,
+        "q3": 212.0,
+        "p95": 253.0
+      },
+      {
+        "venue": "ICML",
+        "year": "2024",
+        "n": 2535,
+        "mean": 164.65996055226825,
+        "median": 165.0,
+        "q1": 141.0,
+        "q3": 186.0,
+        "p95": 221.0
+      },
+      {
+        "venue": "ICML",
+        "year": "2025",
+        "n": 3258,
+        "mean": 166.4889502762431,
+        "median": 165.0,
+        "q1": 145.0,
+        "q3": 187.0,
+        "p95": 219.0
+      },
+      {
+        "venue": "ICML",
+        "year": "2026",
+        "n": 6341,
+        "mean": 166.30925721495032,
+        "median": 166.0,
+        "q1": 147.0,
+        "q3": 185.0,
+        "p95": 215.0
+      },
+      {
+        "venue": "NeurIPS",
+        "year": "2024",
+        "n": 4035,
+        "mean": 183.34374225526642,
+        "median": 182.0,
+        "q1": 156.0,
+        "q3": 209.0,
+        "p95": 255.0
+      },
+      {
+        "venue": "NeurIPS",
+        "year": "2025",
+        "n": 5287,
+        "mean": 181.5600529600908,
+        "median": 180.0,
+        "q1": 155.0,
+        "q3": 206.0,
+        "p95": 248.0
+      },
+      {
+        "venue": "NeurIPS",
+        "year": "2026",
+        "n": 4885,
+        "mean": 188.2849539406346,
+        "median": 186.0,
+        "q1": 162.0,
+        "q3": 211.0,
+        "p95": 257.0
+      }
+    ]
+  },
+  "stability": {
+    "filter": "去掉模型标记 outlier=True 的 1,884 篇（相似度最低的 5%），分母同步缩小",
+    "n_2024_full": 8830,
+    "n_2025_full": 12253,
+    "top3": [
+      {
+        "topic": "思维链推理",
+        "change_full": 1.3737,
+        "change_no_outlier": 1.3861,
+        "rank_full": 1,
+        "rank_no_outlier": 1
+      },
+      {
+        "topic": "参数高效微调",
+        "change_full": 1.1064,
+        "change_no_outlier": 1.1663,
+        "rank_full": 2,
+        "rank_no_outlier": 2
+      },
+      {
+        "topic": "RLVR 与推理强化学习",
+        "change_full": 0.9101,
+        "change_no_outlier": 0.9537,
+        "rank_full": 3,
+        "rank_no_outlier": 3
+      }
+    ],
+    "top3_order_unchanged": true
+  },
+  "score_distribution": {
+    "venue": "ICLR",
+    "year": "2025",
+    "papers": 3697,
+    "mean_rating_all": 6.4571,
+    "sd_rating_all": 0.6749,
+    "spearman_share_vs_mean": -0.1016,
+    "focus": [
+      {
+        "topic": "大语言模型能力与鲁棒性",
+        "n": 149,
+        "share_percent": 4.03,
+        "mean": 6.5703,
+        "sd": 0.681,
+        "iqr": 1.0
+      },
+      {
+        "topic": "参数高效微调",
+        "n": 136,
+        "share_percent": 3.68,
+        "mean": 6.3813,
+        "sd": 0.7181,
+        "iqr": 0.75
+      },
+      {
+        "topic": "多模态理解与生成统一",
+        "n": 136,
+        "share_percent": 3.68,
+        "mean": 6.3172,
+        "sd": 0.6183,
+        "iqr": 0.6667
+      },
+      {
+        "topic": "图神经网络与图表示",
+        "n": 125,
+        "share_percent": 3.38,
+        "mean": 6.394,
+        "sd": 0.703,
+        "iqr": 0.8
+      },
+      {
+        "topic": "思维链推理",
+        "n": 97,
+        "share_percent": 2.62,
+        "mean": 6.3886,
+        "sd": 0.6909,
+        "iqr": 0.75
+      },
+      {
+        "topic": "RLVR 与推理强化学习",
+        "n": 32,
+        "share_percent": 0.87,
+        "mean": 6.3769,
+        "sd": 0.6883,
+        "iqr": 0.75
+      }
+    ]
+  },
+  "tables": [
+    {
+      "file": "data/supplement/tables/abstract_length.csv",
+      "rows": 10
+    },
+    {
+      "file": "data/supplement/tables/topic_change_stability.csv",
+      "rows": 50
+    },
+    {
+      "file": "data/supplement/tables/topic_score_distribution.csv",
+      "rows": 50
+    }
+  ],
+  "figures": [
+    {
+      "file": "reports/figures/fig2_abstract_length_distribution.png",
+      "bytes": 75477
+    },
+    {
+      "file": "reports/figures/fig5_score_distribution_iclr2025.png",
+      "bytes": 170517
+    }
+  ]
+}

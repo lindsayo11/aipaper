@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""把补充轮交付的 8 组结果表与 4 张图落到仓库，并尽可能用仓库数据复算核对。
+"""把补充轮交付的结果表与 4 张图落到仓库，并尽可能用仓库数据复算核对。
+
+摘要长度表不在此导出：它已按统一口径（空白分词）由 build_supplement_analysis.py 重新生成，
+与交付表的正则口径不同，避免两处写同一文件。
 
 输入：项目数据分析补充结果.xlsx（默认取 Downloads 下的交付件，可用 --xlsx 指定）
 输出：
@@ -36,7 +39,6 @@ FIG_DIR = ROOT / "reports" / "figures"
 SHEETS = [
     ("数据规模", "sample_scale.csv"),
     ("字段完整性", "field_completeness.csv"),
-    ("摘要长度", "abstract_length.csv"),
     ("共同年份变化", "topic_change_common_years.csv"),
     ("会议主题差异", "topic_venue_difference.csv"),
     ("主题年度明细", "topic_year_detail.csv"),
@@ -45,7 +47,6 @@ SHEETS = [
 ]
 FIGURES = [
     ("xl/media/image.png", "fig1_venue_year_sample.png"),
-    ("xl/media/image2.png", "fig2_abstract_length_distribution.png"),
     ("xl/media/image3.png", "fig3_topic_share_change_2024_2025.png"),
     ("xl/media/image4.png", "fig4_topic_venue_difference_2025.png"),
 ]
@@ -336,21 +337,6 @@ def main(argv: list[str] | None = None) -> int:
             verification[sheet] = verify_table(sheet, body, expected[sheet])
         else:
             verification[sheet] = {"status": "skipped"}
-    if "摘要长度" in verification:
-        v = verification["摘要长度"]
-        deltas = []
-        for row in filenames["摘要长度"][1]:
-            key = key_of("摘要长度", row)
-            exp = expected["摘要长度"].get(key)
-            if exp:
-                deltas.append(float(row[3]) - exp["均值"])
-        v["status"] = "definition_difference"
-        v["mean_word_count_delta"] = {"min": round(min(deltas), 4), "max": round(max(deltas), 4)} if deltas else None
-        v["note"] = (
-            "样本数逐届一致；摘要英文词数均值比仓库空白分词口径高 "
-            f"{min(deltas):.2f}～{max(deltas):.2f} 词（不是常数偏移，属分词实现不同）。"
-            "交付表的分词实现未随项目保留，故不复算、也不改写表内数值；"
-            "其余 7 张表已逐格复算一致。")
 
     result = {
         "exported_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
