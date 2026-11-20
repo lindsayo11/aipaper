@@ -1,6 +1,6 @@
 # 补充轮结果表与图
 
-两个来源：**交付件原样导出**（7 张表 + 4 张图，逐格复算）和**本项目重算**（摘要长度统一口径、稳健性表、评分分布表，共 3 张表 + 2 张图，其中 1 张为重绘）。交付原件以 ASCII 文件名 `supplement_results_2026-11-20.xlsx` 挂在 Release [`scores-2026-11-20`](https://github.com/lindsayo11/aipaper/releases/tag/scores-2026-11-20)（292,428 B，SHA256 `52907d69e3339f9d7aaadb653aea1120c2304b6a7e58d6d04b48fe665715d002`）。
+两个来源：**交付件原样导出**（7 张表 + 3 张图，逐格复算）和**本项目重算**（3 张表 + 2 张图，其中图 2 在原图基础上重绘）。共 10 张表、5 张图。交付原件以 ASCII 文件名 `supplement_results_2026-11-20.xlsx` 挂在 Release [`scores-2026-11-20`](https://github.com/lindsayo11/aipaper/releases/tag/scores-2026-11-20)（292,428 B，SHA256 `52907d69e3339f9d7aaadb653aea1120c2304b6a7e58d6d04b48fe665715d002`）。
 
 ## 表
 
@@ -19,13 +19,27 @@
 
 ## 图
 
-| 文件 | 来源 | 内容 |
-| --- | --- | --- |
-| `reports/figures/fig1_venue_year_sample.png` | 导出 | 各会议年度进入分析的论文数（2026 NeurIPS 标注 61.84% 覆盖） |
-| `reports/figures/fig2_abstract_length_distribution.png` | **重绘** | 9 届摘要词数的四分位区间与中位数，全体中位数 177 词，同口径 |
-| `reports/figures/fig3_topic_share_change_2024_2025.png` | 导出 | 三会合并样本的主题占比变化，思维链推理 +1.37 pp 居首 |
-| `reports/figures/fig4_topic_venue_difference_2025.png` | 导出 | 2025 年主题占比的会议差异 |
-| `reports/figures/fig5_score_distribution_iclr2025.png` | **新绘** | 左：六个重点主题的论文级均分分布；右：50 个主题的份额–均分散点 |
+3 张来自交付件、2 张本项目重绘，路径相对本文件，GitHub 上直接渲染。
+
+**图 1　各会议年度进入分析的论文数**（交付件）——2026 NeurIPS 只有 61.84% 覆盖，故不进入三会横向比较。
+
+![各会议年度进入分析的论文数](../../reports/figures/fig1_venue_year_sample.png)
+
+**图 2　摘要英文词数分布**（重绘，空白分词口径）——竖条为四分位区间，横线为中位数，圆点为均值；全体中位数 177 词。
+
+![摘要英文词数分布](../../reports/figures/fig2_abstract_length_distribution.png)
+
+**图 3　三会合并样本的主题占比变化 2024→2025**（交付件）——思维链推理 +1.37 pp 居首。
+
+![三会合并主题占比变化](../../reports/figures/fig3_topic_share_change_2024_2025.png)
+
+**图 4　2025 年主题占比的会议差异**（交付件）——如 3D 高斯泼溅重建在 NeurIPS 2.53%、ICLR 2.35%、ICML 0.40%。
+
+![主题占比的会议差异](../../reports/figures/fig4_topic_venue_difference_2025.png)
+
+**图 5　ICLR 2025 重点主题的评分分布与份额**（新绘）——左：六个主题的论文级均分箱线；右：50 个主题的份额–均分散点，红点为增长前三。
+
+![ICLR 2025 评分分布](../../reports/figures/fig5_score_distribution_iclr2025.png)
 
 ## 摘要长度：为什么换口径
 
